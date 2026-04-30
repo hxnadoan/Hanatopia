@@ -1,0 +1,11 @@
+/* background image */
+
+body {
+
+    background: red;
+    /*background-image: url("../../assets/media/landing_sky.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
