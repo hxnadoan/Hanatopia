@@ -1,22 +1,13 @@
-/* font style ========================================== */
 @font-face {
     font-family: ModernDOS;
     src: url(../assets/fonts/ModernDOS8x14.ttf);
 }
 
-@font-face {
-    font-family: Dico;
-    src: url(../assets/fonts/Dico.ttf);
+html {
+    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default !important;
+    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer !important;
 }
 
-@font-face {
-    font-family: PixelOperator;
-    src: url(../assets/fonts/PixelOperator.ttf);
-}
-
-/* ======================================================*/
-
-/* background image ====================================*/
 body {
     
     background-image: url("../assets/media/landing_sky.png");
@@ -25,7 +16,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    cursor: pointer;
 }
 
 h1 {

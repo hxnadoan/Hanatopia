@@ -1,0 +1,48 @@
+/* font style ========================================== */
+@font-face {
+    font-family: ModernDOS;
+    src: url(../assets/fonts/ModernDOS8x14.ttf);
+}
+
+@font-face {
+    font-family: Dico;
+    src: url(../assets/fonts/Dico.ttf);
+}
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(../assets/fonts/PixelOperator.ttf);
+}
+
+/* ======================================================*/
+html {
+    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default !important;
+    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer !important;
+}
+
+:root{
+    background-image: url("../assets/media/angel/angelsky1.webp");
+
+}
+
+.glorp-mode {
+    background-image: url("../assets/media/glorp/glorpsky.webp");
+}
+
+.hidden {
+    display: none;
+}
+
+.glorp-mode .glorp-mode\:hidden {
+    display: none;
+}
+
+.glorp-mode .glorp-mode\:block {
+    display: block;
+}
+
+/* ======================================================*/
+
+#topuhead-toggle {
+    width: 120px;
+}
