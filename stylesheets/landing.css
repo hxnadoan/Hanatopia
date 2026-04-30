@@ -1,0 +1,70 @@
+/* font style ========================================== */
+@font-face {
+    font-family: ModernDOS;
+    src: url(../assets/fonts/ModernDOS8x14.ttf);
+}
+
+@font-face {
+    font-family: Dico;
+    src: url(../assets/fonts/Dico.ttf);
+}
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(../assets/fonts/PixelOperator.ttf);
+}
+
+/* ======================================================*/
+
+/* background image ====================================*/
+body {
+    
+    background-image: url("../assets/media/landing_sky.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    cursor: pointer;
+}
+
+h1 {
+
+    font-family: ModernDOS;
+    font-size: 70px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 120px;
+}
+
+h2 {
+    font-family: ModernDOS;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#landing_heart {
+    width: 800px;
+    image-rendering: pixelated;
+
+    animation: float 1s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform:translateY(0);
+    }
+
+    50% {
+        transform:translateY(-20px);
+    }
+}
