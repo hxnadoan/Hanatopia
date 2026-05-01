@@ -70,14 +70,21 @@ html.glorp-mode :is(
 }
 
 /* ======================================================*/
-.outside-frame {
+.container{
     display: grid;
-    grid-template-columns: repeat(12, 100px);
-    grid-template-rows: repeat(12, 100px);
+    grid-template-columns: 200px, 1fr, 200px;
+    gap: 16px;
+
+    max-width: 1400px;
+    margin: auto;
+
+    padding: 20px;
 }
 
-#theme-switch{
-    grid-row: 9, 9;
+.item{
+    font-size: 300px;
+    text-align: center;
+    background-color: #007899;
 }
 
 #topuhead{
