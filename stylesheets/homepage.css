@@ -1,4 +1,7 @@
-/* font style ========================================== */
+
+/* =====================================================
+ * default style  
+ * =====================================================*/
 @font-face {
     font-family: ModernDOS;
     src: url(../assets/fonts/ModernDOS8x14.ttf);
@@ -14,7 +17,6 @@
     src: url(../assets/fonts/PixelOperator.ttf);
 }
 
-/* ======================================================*/
 html {
     cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
 }
@@ -26,7 +28,7 @@ html {
     select,
     textarea,
     summary,
-    img,
+    #topuhead,
     [role="button"],
     [onclick],
     .clickable
@@ -41,8 +43,9 @@ html {
     --accent-color: #ff80A4;
 }
 
-/* ======================================================*/
-
+/* =====================================================
+ * glorp style  
+ * =====================================================*/
 html.glorp-mode{
     cursor: url("../assets/cursors/glorptopia_pointer.cur"), default;
 }
@@ -54,7 +57,7 @@ html.glorp-mode :is(
     select,
     textarea,
     summary,
-    img,
+    #topuhead,
     [role="button"],
     [onclick],
     .clickable
@@ -69,24 +72,80 @@ html.glorp-mode :is(
     --accent-color: #BFFF3C;
 }
 
-/* ======================================================*/
+/* =====================================================
+ * grid layout  
+ * =====================================================*/
+
+ * {
+  outline: 1px solid red;
+}
 .container{
     display: grid;
-    grid-template-columns: 200px, 1fr, 200px;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
     gap: 16px;
 
     max-width: 1400px;
     margin: auto;
-
-    padding: 20px;
+    padding: 0px;
 }
 
-.item{
-    font-size: 300px;
+/*.icon-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    justify-items: center;
+}*/
+
+.sidebar-L{
+    grid-column: 0;
+}
+
+.center{
+    grid-column: 1;
+}
+
+.sidebar-R{
+    grid-column: 2;
+}
+
+/* =====================================================
+ * nav bar format
+ * =====================================================*/
+h1{
+    font-family: Dico;
+    font-weight: normal;
+    font-size: 30px;
+    color: var(--accent-color);
     text-align: center;
-    background-color: #007899;
+}
+.nav{
+    background-color: var(--primary-color);
+    border: 5px solid var(--accent-color);
+    width: 250px;
+    height: 480px;
+    text-align: left;
+}
+.nav img{
+    image-rendering: pixelated;
+    width: 30px;
+    padding-right: 15px;
+    padding-left: 30px;
+}
+.nav a{
+    font-family: PixelOperator;
+    font-size: 30px;
+    color: var(--text-color);
+    line-height: 1.35;
+}
+.nav li{
+    list-style-type: none;
 }
 
+/* =====================================================
+ * tofu + message   
+ * =====================================================*/
 #topuhead{
     width: 120px;
 }
