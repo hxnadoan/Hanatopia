@@ -16,33 +16,70 @@
 
 /* ======================================================*/
 html {
-    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default !important;
-    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer !important;
+    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
+}
+
+:is(
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    img,
+    [role="button"],
+    [onclick],
+    .clickable
+) {
+    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer;
 }
 
 :root{
     background-image: url("../assets/media/angel/angelsky1.webp");
-
-}
-
-.glorp-mode {
-    background-image: url("../assets/media/glorp/glorpsky.webp");
-}
-
-.hidden {
-    display: none;
-}
-
-.glorp-mode .glorp-mode\:hidden {
-    display: none;
-}
-
-.glorp-mode .glorp-mode\:block {
-    display: block;
+    --text-color: black;
+    --primary-color: #FFCDDB;
+    --accent-color: #ff80A4;
 }
 
 /* ======================================================*/
 
-#topuhead-toggle {
+html.glorp-mode{
+    cursor: url("../assets/cursors/glorptopia_pointer.cur"), default;
+}
+
+html.glorp-mode :is(
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    img,
+    [role="button"],
+    [onclick],
+    .clickable
+) {
+    cursor: url("../assets/cursors/glorptopia_link.cur"), pointer;
+}
+
+.glorp-mode{
+    background-image: url("../assets/media/glorp/glorpsky.webp");
+    --text-color: white;
+    --primary-color: #007899;
+    --accent-color: #BFFF3C;
+}
+
+/* ======================================================*/
+.outside-frame {
+    display: grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(12, 100px);
+}
+
+#theme-switch{
+    grid-row: 9, 9;
+}
+
+#topuhead{
     width: 120px;
 }

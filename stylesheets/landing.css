@@ -4,8 +4,7 @@
 }
 
 html {
-    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default !important;
-    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer !important;
+    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
 }
 
 body {
