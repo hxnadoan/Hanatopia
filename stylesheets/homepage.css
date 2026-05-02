@@ -79,15 +79,57 @@ html.glorp-mode :is(
  * {
   outline: 1px solid red;
 }
+
 .container{
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
-    gap: 16px;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: auto;
+}
 
-    max-width: 1400px;
-    margin: auto;
-    padding: 0px;
+/* sidebar (left) */
+.leftside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 300px;
+    height: 500px;
+
+    padding: 20px;
+    
+
+}
+
+.nav{
+    width: 100%;
+
+}
+
+.guestbook-bubble{
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.theme-switch{
+
+}
+
+/* center */
+.center{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+
+}
+
+/* sidebar (right) */
+.rightside{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 200px 100px 200px;
 }
 
 /*.icon-container{
@@ -98,22 +140,12 @@ html.glorp-mode :is(
     justify-items: center;
 }*/
 
-.sidebar-L{
-    grid-column: 0;
-}
 
-.center{
-    grid-column: 1;
-}
-
-.sidebar-R{
-    grid-column: 2;
-}
 
 /* =====================================================
  * nav bar format
  * =====================================================*/
-h1{
+.nav h1{
     font-family: Dico;
     font-weight: normal;
     font-size: 30px;
@@ -131,7 +163,7 @@ h1{
     image-rendering: pixelated;
     width: 30px;
     padding-right: 15px;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 .nav a{
     font-family: PixelOperator;
@@ -139,7 +171,7 @@ h1{
     color: var(--text-color);
     line-height: 1.35;
 }
-.nav li{
+.nav ul{
     list-style-type: none;
 }
 
