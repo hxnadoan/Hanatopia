@@ -42,6 +42,29 @@ html {
     --primary-color: #FFCDDB;
     --accent-color: #ff80A4;
     --header-color: #ff2674;
+    --subheader-color: black;
+}
+
+/* adds the dimmed to the root background to make elements pop*/
+body {
+    min-height: 100px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0; /* covers whole viewport */
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0; /* makes sure it lays behind content */
+    pointer-events: none; /* ignores all mouse input */
+
+}
+
+/* prevents overlay bleeds to any elements with no position set */
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* =====================================================
@@ -72,6 +95,7 @@ html.glorp-mode :is(
     --primary-color: #007899;
     --accent-color: #BFFF3C;
     --header-color: #BFF3C;
+    --subheader-color: white;
 }
 
 /* =====================================================
@@ -119,10 +143,28 @@ html.glorp-mode :is(
 /* center */
 .center{
     grid-area: 1 / 2 / 1 / 2;
+    position: relative;
 }
 
 #frame {
     width: 100%;
+    display: block;
+}
+
+/* icon grid */
+.icon-container{
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px;
+    gap: 32px;
+    row-gap: 50px;
+    align-items: center;
+    justify-items: center;
+
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dialogue-box{
@@ -157,13 +199,6 @@ html.glorp-mode :is(
 }
 
 
-/*.icon-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-
-    justify-items: center;
-}*/
 
 /* =====================================================
  * media queries
@@ -179,6 +214,13 @@ integrate for portrait mobile view first*/
     font-weight: normal;
     font-size: 30px;
     color: var(--header-color);
+ }
+
+ h2{
+    font-family: PixelOperator;
+    font-weight: bold;
+    font-size: 25px;
+    color:var(--subheader-color);
  }
 
  p{
@@ -257,6 +299,67 @@ integrate for portrait mobile view first*/
 /* =====================================================
  * center format
  * =====================================================*/
+/* icons assets */ 
+.icon-size{
+    image-rendering: pixelated;
+    width: 90px;
+}
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about-me-img{
+    width: 120px;
+    transform: translateY(-10px);
+}
+
+.github{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#github-img{
+    width: 80px;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.changelog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sitebuild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gustbook{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* dialogue assets */ 
  .dialogue-box{
     z-index: 2;
