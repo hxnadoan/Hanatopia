@@ -101,10 +101,11 @@ html.glorp-mode :is(
 /* =====================================================
  * grid layout (element positioning) 
  * =====================================================*/
- /* to help with positioning 
+/* to help with positioning 
  * {
-  outline: 1px solid red;
+outline: 1px solid red;
 } 
+
  */
 
 
@@ -310,6 +311,9 @@ integrate for portrait mobile view first*/
     flex-direction: column;
     align-items: center;
 }
+.about-me h2{
+    transform: translateY(-20px);
+}
 #about-me-img{
     width: 120px;
     transform: translateY(-10px);
@@ -320,8 +324,12 @@ integrate for portrait mobile view first*/
     flex-direction: column;
     align-items: center;
 }
+.github h2{
+    transform: translateX(10px);
+}
 #github-img{
     width: 80px;
+    transform: translateX(10px);
 }
 
 .education{
@@ -329,11 +337,17 @@ integrate for portrait mobile view first*/
     flex-direction: column;
     align-items: center;
 }
+.education h2{
+    transform: translateY(-5px);
+}
 
 .experience{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.experience h2{
+    transform: translateY(-5px);
 }
 
 .skills{
@@ -354,74 +368,74 @@ integrate for portrait mobile view first*/
     align-items: center;
 }
 
-.gustbook{
+.guestbook{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /* dialogue assets */ 
- .dialogue-box{
+.dialogue-box{
     z-index: 2;
- }
- #minihana{
+}
+#minihana{
     border: 5px solid var(--accent-color);
- }
+}
 
 /* dialogue text */
- .dialogue-text{
+.dialogue-text{
     position: absolute;
     z-index: 3;
     width: 600px;
- }
- #welcome{
+}
+#welcome{
     float: left;
- }
- #scramble{
+}
+#scramble{
     float: right;
     margin-right: 10px;
- }
- #ds{
+}
+#ds{
     float: left;
- }
+}
 
 /* =====================================================
  * rightside format
  * =====================================================*/
- #hana{
+#hana{
     width: 288px;
     border: 5px solid var(--accent-color);
     box-shadow: 3px 3px 20px black;
     margin-bottom: 20px;
- }
+}
 
- .info-box{
+.info-box{
     background-color: var(--primary-color);
     border: 5px solid var(--accent-color);
     box-shadow: 3px 3px 20px black;
- }
- .info-box h1{
+}
+.info-box h1{
     padding-left: 10px;
     transform: translateY(-10px);
- }
- .info-box p{
+}
+.info-box p{
     padding-left: 10px;
     transform: translateY(-30px);
- }
+}
 
- #bio{
+#bio{
     width: 288px;
     height: 95px;
     margin-bottom: 20px;
- }
+}
 
- #contact{
+#contact{
     width: 288px;
     height: 70px;
     margin-bottom: 20px;
- }
+}
 
- #credits{
+#credits{
     width: 288px;
     height: 135px;
- }
+}
