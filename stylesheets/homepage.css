@@ -204,32 +204,39 @@ outline: 1px solid red;
 /* =====================================================
  * media queries
  * =====================================================*/
-/* have different styling for landscape/portrait 
-integrate for portrait mobile view first*/
+@media (max-width: 600px){
+    .container{
+    display: column;
+
+    width: 50%;
+    width: fit-content;
+    margin: 0 auto;
+}
+}
 
 /* =====================================================
  * styling format
  * =====================================================*/
- h1{
+h1{
     font-family: Dico;
     font-weight: normal;
     font-size: 30px;
     color: var(--header-color);
- }
+}
 
- h2{
+h2{
     font-family: PixelOperator;
     font-weight: bold;
     font-size: 25px;
     color:var(--subheader-color);
- }
+}
 
- p{
+p{
     font-family: PixelOperator;
     font-weight: normal;
     font-size: 20px;
     color: var(--text-color);
- }
+}
 /* =====================================================
  * leftside format
  * =====================================================*/
