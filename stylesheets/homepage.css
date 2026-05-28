@@ -94,7 +94,7 @@ html.glorp-mode :is(
     --text-color: white;
     --primary-color: #007899;
     --accent-color: #BFFF3C;
-    --header-color: #BFF3C;
+    --header-color: #BFFF3C;
     --subheader-color: white;
 }
 
@@ -105,8 +105,8 @@ html.glorp-mode :is(
  * {
 outline: 1px solid red;
 } 
-
  */
+
 
 
 .container{
@@ -136,7 +136,7 @@ outline: 1px solid red;
 
 .guestbook-bubble{
     width: 100%;
-    transform: translate(120px);
+    transform: translate(80px);
     width: 150px;
 }
 
@@ -199,21 +199,6 @@ outline: 1px solid red;
     box-sizing: border-box;
 }
 
-
-
-/* =====================================================
- * media queries
- * =====================================================*/
-@media (max-width: 600px){
-    .container{
-    display: column;
-
-    width: 50%;
-    width: fit-content;
-    margin: 0 auto;
-}
-}
-
 /* =====================================================
  * styling format
  * =====================================================*/
@@ -271,7 +256,7 @@ p{
 /* guest bubble */
     #speechbubble{
         image-rendering: crisp-edges;
-        width: 150px;
+        width: 200px;
         filter: drop-shadow(1px 1px 3px black);
     }
 
@@ -283,15 +268,19 @@ p{
     }
 
     .theme-switch h1{
-        text-align: right;
+        text-align: center;
         transform: translateY(-100px);
-        margin-left: 130px;
+        margin-left: 150px;
     }
 
     .theme-switch
     {
+        width: 100%;
         height: 120px;
         animation: shuffle 1s infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
     }
 
     @keyframes shuffle{
@@ -308,103 +297,104 @@ p{
  * center format
  * =====================================================*/
 /* icons assets */ 
-.icon-size{
-    image-rendering: pixelated;
-    width: 90px;
-}
+    .icon-size{
+        image-rendering: pixelated;
+        width: 90px;
+    }
 
-.about-me{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.about-me h2{
-    transform: translateY(-20px);
-}
-#about-me-img{
-    width: 120px;
-    transform: translateY(-10px);
-}
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me h2{
+        transform: translateY(-20px);
+    }
+    #about-me-img{
+        width: 120px;
+        transform: translateY(-10px);
+    }
 
-.github{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.github h2{
-    transform: translateX(10px);
-}
-#github-img{
-    width: 80px;
-    transform: translateX(10px);
-}
+    .github{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .github h2{
+        transform: translateX(10px);
+    }
+    #github-img{
+        width: 80px;
+        transform: translateX(10px);
+    }
 
-.education{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.education h2{
-    transform: translateY(-5px);
-}
+    .education{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .education h2{
+        transform: translateY(-5px);
+    }
 
-.experience{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.experience h2{
-    transform: translateY(-5px);
-}
+    .experience{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .experience h2{
+        transform: translateY(-5px);
+    }
 
-.skills{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.changelog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .changelog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.sitebuild{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .sitebuild{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.guestbook{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .guestbook{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 /* dialogue assets */ 
-.dialogue-box{
-    z-index: 2;
-}
-#minihana{
-    border: 5px solid var(--accent-color);
-}
+    .dialogue-box{
+        z-index: 2;
+    }
+    #minihana{
+        border: 5px solid var(--accent-color);
+    }
 
 /* dialogue text */
-.dialogue-text{
-    position: absolute;
-    z-index: 3;
-    width: 600px;
-}
-#welcome{
-    float: left;
-}
-#scramble{
-    float: right;
-    margin-right: 10px;
-}
-#ds{
-    float: left;
-}
+    .dialogue-text{
+        position: absolute;
+        margin-left: 185px;
+        margin-top: -10px;
+        z-index: 3;
+        width: 600px;
+    }
+    #welcome{
+        font-size: 30px;
+        float: left;
+    }
+    #scramble{
+        font-size: 30px;
+        float: left;
+        transform: translateY(-150%);
+    }
 
 /* =====================================================
  * rightside format
@@ -445,4 +435,290 @@ p{
 #credits{
     width: 288px;
     height: 135px;
+}
+
+/* =====================================================
+ * burger menu
+ * =====================================================*/
+.nav-bar, .burger-button {
+    display: none;
+}
+
+.nav-wrapper {
+    position: sticky;   
+    top: 0;
+    z-index: 300;
+}
+
+.nav-bar {
+    background: var(--primary-color);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    filter: drop-shadow(1px 1px 3px black);
+}
+
+#hanatopia-logo{
+    font-family: Dico;
+    font-size: 20px;
+    color: var(--accent-color)
+}
+
+.burger-button {
+    position: relative;
+    margin-left: auto;
+    height: 40px;
+    width: 40px;
+}
+
+/* ham lines */
+    .burger-button span {
+        height: 5px;
+        width: 90%;
+        background-color: var(--header-color);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .burger-button span:nth-child(1) {
+        top: 25%;
+    }
+    .burger-button span:nth-child(3) {
+        top: 75%;
+    }
+
+/* exit */
+    .burger-button.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+    }
+
+    .burger-button.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-button.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+
+/* menu */
+    .burger-menu {
+        background-color: var(--accent-color);
+        height: 45vh;
+        width: 200px;
+        max-width: 250px;
+        position: absolute;
+        top: 100%;
+        right: -250px;
+        z-index: 200;
+        pointer-events: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        transition: .5s ease;
+    }
+
+    .burger-menu.active {
+        right: 0px;
+        pointer-events: all;
+    }
+
+    .burger-menu a:hover {
+        background-color: var(--header-color);
+    }
+
+    .burger-menu img{
+        image-rendering: pixelated;
+        width: 20px;
+        padding-right: 5px;
+    }
+
+    .burger-menu ul {
+        list-style: none;
+    }
+    .burger-menu a {
+        text-decoration: none;
+        text-align: right;
+        display: block;
+        padding: 10px;
+        font-family: PixelOperator;
+        font-size: 20px;
+        line-height: 0.5;
+        color: black;
+    }
+
+/* =====================================================
+ * media queries
+ * =====================================================*/
+/* MOBILE VERSION */
+@media (max-width: 600px){
+
+    .nav-wrapper {
+        display: block;
+    }
+
+    .nav-bar {
+        display: flex;
+    }
+
+    .burger-button {
+        display: block;
+    }
+
+    .container{
+    grid-template-rows: 10px 270px 1fr 400px;
+    grid-template-columns: 600px;
+    align-items: start;
+
+    width: 80%;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* leftside col -> top row */
+    .leftside{
+    grid-row: 2;
+    grid-column: 1;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .guestbook-bubble{
+        transform: translateX(250px);
+    }
+
+    #speechbubble{
+        width: 200px;
+    }
+
+    #topuhead{
+        width: 80px;
+    }
+
+    .theme-switch {
+        padding-left: 200px;
+    }
+
+    .theme-switch h1 {
+        text-align: center;
+        margin-left: -250px;
+    }
+
+/* center col -> center row */
+    .center{
+        margin-left: 30px;
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    #frame {
+        width: 90%;
+        display: block;
+    }
+
+    .icon-container{
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+        row-gap: 25px;
+
+        top: 0px;
+        left: 8%;
+        transform: translateY(55%);
+    }
+
+    .icon-size{
+        width: 65px;
+    }
+
+    #about-me-img{
+        width: 90px;
+    }
+
+    #github-img{
+        width: 55px;
+    }
+
+    .icon-container h2{
+        font-size: 18px;
+    }
+
+    .dialogue-box{
+        width: 90%;
+        transform: translateY(-70px);
+        margin-left: 100px;
+    }
+
+    #dialoguebg{
+        width: 80%
+    }
+
+    #minihana{
+        width: 16.5%;
+        left: -100px;
+        bottom: 0;
+    }
+
+    .dialogue-text{
+        transform: translateY(-40px);
+        margin-left: -90px;
+    }
+
+    .dialogue-text{
+        width: 420px;
+        margin-left: 115px;
+        margin-top: 0px;
+    }
+
+    #welcome{
+        font-size: 19px;
+    }
+
+    #scramble{
+        font-size: 18px;
+        transform: translateY(-150%)
+    }
+
+    /* rightside col -> bottom row */
+    .rightside{
+        grid-row: 4;
+        grid-column: 1;
+        margin-top: 0px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    #hana{
+    width: 188px;
+    float: right;
+    margin-right: 50px;
+}
+
+    #bio{
+        width: 200px;
+    }
+
+    #contact{
+        width: 250px;
+    }
+
+    #credits{
+        width: 288px;
+    }
+}
+
+@media (min-width: 601px) {
+    .nav-wrapper {
+        display: none;
+    }
 }
