@@ -29,6 +29,7 @@ html {
     textarea,
     summary,
     #topuhead,
+    .burger-button,
     [role="button"],
     [onclick],
     .clickable
@@ -82,6 +83,7 @@ html.glorp-mode :is(
     textarea,
     summary,
     #topuhead,
+    .burger-button,
     [role="button"],
     [onclick],
     .clickable
