@@ -391,13 +391,17 @@ p{
         width: 600px;
     }
     #welcome{
-        font-size: 30px;
+        font-size: 25px;
         float: left;
     }
     #scramble{
-        font-size: 30px;
+        font-size: 25px;
         float: left;
         transform: translateY(-150%);
+    }
+    #warning{
+        float: right;
+        margin-right: 10px;
     }
 
 /* =====================================================
@@ -733,6 +737,12 @@ p{
         font-size: 12px;
         float: none;
         margin-top: 30px;
+    }
+
+    #warning {
+        font-size: 10px;
+        margin-right: auto;
+        transform: translateY(-400%);
     }
 
     /* ---- RIGHTSIDE ---- */
