@@ -19,6 +19,7 @@
 
 html {
     cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
+    overflow-x: hidden;
 }
 
 :is(
@@ -50,6 +51,7 @@ html {
 body {
     min-height: 100px;
     position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -447,6 +449,7 @@ p{
 }
 
 .nav-wrapper {
+    width: 100%;
     position: sticky;   
     top: 0;
     z-index: 300;
@@ -516,7 +519,7 @@ p{
         max-width: 250px;
         position: absolute;
         top: 100%;
-        right: -250px;
+        right: 0;
         z-index: 200;
         pointer-events: none;
 
@@ -526,9 +529,14 @@ p{
         align-items: center;
         font-size: 3rem;
         transition: .5s ease;
+
+        transform: translateX(100%);
+        visibility: hidden;
     }
 
     .burger-menu.active {
+        transform: translateX(0%);
+        visibility: visible;
         right: 0px;
         pointer-events: all;
     }
@@ -561,7 +569,11 @@ p{
  * media queries
  * =====================================================*/
 /* MOBILE VERSION */
-@media (max-width: 600px){
+/* =====================================================
+ * media queries
+ * =====================================================*/
+/* MOBILE VERSION */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
 
     .nav-wrapper {
         display: block;
@@ -575,147 +587,190 @@ p{
         display: block;
     }
 
-    .container{
-    grid-template-rows: 10px 270px 1fr 400px;
-    grid-template-columns: 600px;
-    align-items: start;
-
-    width: 80%;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-/* leftside col -> top row */
-    .leftside{
-    grid-row: 2;
-    grid-column: 1;
-    }
-
-    .nav{
-        display: none;
-    }
-
-    .guestbook-bubble{
-        transform: translateX(250px);
-    }
-
-    #speechbubble{
-        width: 200px;
-    }
-
-    #topuhead{
-        width: 80px;
-    }
-
-    .theme-switch {
-        padding-left: 200px;
-    }
-
-    .theme-switch h1 {
-        text-align: center;
-        margin-left: -250px;
-    }
-
-/* center col -> center row */
-    .center{
-        margin-left: 30px;
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    #frame {
-        width: 90%;
-        display: block;
-    }
-
-    .icon-container{
-        grid-template-columns: 100px 100px 100px 100px;
-        grid-template-rows: 100px 100px;
-        gap: 10px;
-        row-gap: 25px;
-
-        top: 0px;
-        left: 8%;
-        transform: translateY(55%);
-    }
-
-    .icon-size{
-        width: 65px;
-    }
-
-    #about-me-img{
-        width: 90px;
-    }
-
-    #github-img{
-        width: 55px;
-    }
-
-    .icon-container h2{
-        font-size: 18px;
-    }
-
-    .dialogue-box{
-        width: 90%;
-        transform: translateY(-70px);
-        margin-left: 100px;
-    }
-
-    #dialoguebg{
-        width: 80%
-    }
-
-    #minihana{
-        width: 16.5%;
-        left: -100px;
-        bottom: 0;
-    }
-
-    .dialogue-text{
-        transform: translateY(-40px);
-        margin-left: -90px;
-    }
-
-    .dialogue-text{
-        width: 420px;
-        margin-left: 115px;
-        margin-top: 0px;
-    }
-
-    #welcome{
-        font-size: 19px;
-    }
-
-    #scramble{
-        font-size: 18px;
-        transform: translateY(-150%)
-    }
-
-    /* rightside col -> bottom row */
-    .rightside{
-        grid-row: 4;
-        grid-column: 1;
-        margin-top: 0px;
-        padding: 30px;
+    /* --- Grid: single column, full viewport width --- */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
         box-sizing: border-box;
     }
 
-    #hana{
-    width: 188px;
-    float: right;
-    margin-right: 50px;
-}
-
-    #bio{
-        width: 200px;
+    /* ---- LEFTSIDE (theme switch + guestbook bubble) ---- */
+    .leftside {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    #contact{
-        width: 250px;
+    .nav {
+        display: none;
     }
 
-    #credits{
-        width: 288px;
+    .theme-switch {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-right: 100px;
+    }
+
+    .theme-switch h1 {
+        transform: translateY(200%);
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    #topuhead {
+        width: 50px;
+        transform: translateY(100%);
+    }
+
+    /* Guestbook bubble: keep it right-aligned */
+    .guestbook-bubble {
+        transform: translateX(190%);
+        width: 110px;
+    }
+
+    #speechbubble {
+        width: 110px;
+    }
+
+    /* ---- CENTER ---- */
+    .center {
+        width: 100%;
+        padding-top: 50px;
+        box-sizing: border-box;
+        margin: 0;
+        /* allow children to stack normally */
+        position: static;
+    }
+
+    #frame {
+        width: 100%;
+        display: block;
+    }
+
+    /* Icon grid: flow inside the frame, no absolute positioning */
+    .icon-container {
+        position: static;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        gap: 0px;
+        row-gap: 0px;
+        transform: none;
+        margin-top: -250px;
+    }
+
+    .icon-size {
+        width: 45px;
+    }
+
+    #about-me-img {
+        width: 60px;
+        transform: none;
+    }
+
+    #github-img {
+        width: 40px;
+        transform: none;
+    }
+
+    .icon-container h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .about-me h2 {
+        transform: translateY(-40%);
+    }
+
+    .github h2,
+    .education h2,
+    .experience h2 {
+        transform: none;
+    }
+
+    /* ---- DIALOGUE BOX ---- */
+    .dialogue-box {
+        width: 80%;
+        margin-left: 40px;
+        transform: none;
+        display: flex;
+        align-items: center;
+    }
+
+    #dialoguebg {
+        width: 100%;
+        padding-left: 35px;
+    }
+
+    #minihana {
+        left: -35px;
+        bottom: 0;
+        width: 60px;
+    }
+
+    .dialogue-text {
+        position: absolute;
+        margin-left: 90px;
+        margin-top: 100px;
+        width: 70%;
+    }
+
+    #welcome {
+        font-size: 13px;
+        float: none;
+        display: flex;
+    }
+
+    #scramble {
+        font-size: 12px;
+        float: none;
+        margin-top: 30px;
+    }
+
+    /* ---- RIGHTSIDE ---- */
+    .rightside {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hana {
+        width: 60%;
+        max-width: 220px;
+        float: none;
+        display: block;
+    }
+
+    #bio,
+    #contact,
+    #credits {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .info-box h1 {
+        transform: none;
+        padding: 8px 10px 0;
+    }
+
+    .info-box p {
+        transform: none;
+        padding: 0 10px 8px;
     }
 }
 
