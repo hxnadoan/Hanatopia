@@ -21,7 +21,11 @@ topuhead.onclick = function(){
 /* =====================================================
  * icon buttons
  * =====================================================*/
+const github = document.getElementById("github-img");
 
+github.addEventListener('click', () => {
+    window.open('https://github.com/hxnadoan', '_blank');
+});
 
 /* =====================================================
  * scrambled text

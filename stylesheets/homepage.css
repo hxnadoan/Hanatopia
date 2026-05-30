@@ -31,6 +31,14 @@ html {
     summary,
     #topuhead,
     .burger-button,
+    .about-me,
+    .github,
+    .education,
+    .experience,
+    .skills,
+    .changelog,
+    .sitebuild,
+    .guestbook, 
     [role="button"],
     [onclick],
     .clickable
@@ -86,6 +94,14 @@ html.glorp-mode :is(
     summary,
     #topuhead,
     .burger-button,
+    .about-me,
+    .github,
+    .education,
+    .experience,
+    .skills,
+    .changelog,
+    .sitebuild,
+    .guestbook, 
     [role="button"],
     [onclick],
     .clickable
@@ -306,10 +322,18 @@ p{
         width: 90px;
     }
 
-    .about-me{
+    .about-me,
+    .github,
+    .education,
+    .experience,
+    .skills,
+    .changelog,
+    .sitebuild,
+    .guestbook {
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: pointer;
     }
     .about-me h2{
         transform: translateY(-20px);
@@ -318,12 +342,6 @@ p{
         width: 120px;
         transform: translateY(-10px);
     }
-
-    .github{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .github h2{
         transform: translateX(10px);
     }
@@ -331,47 +349,11 @@ p{
         width: 80px;
         transform: translateX(10px);
     }
-
-    .education{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .education h2{
         transform: translateY(-5px);
     }
-
-    .experience{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .experience h2{
         transform: translateY(-5px);
-    }
-
-    .skills{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .changelog{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sitebuild{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .guestbook{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
 /* dialogue assets */ 
