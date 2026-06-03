@@ -1,0 +1,106 @@
+6/02/2026
+- finalized glorp-mode toggle assets 
+
+5/29/2026
+- fixed mobile integration to work with most new model phones (at least)
+- added GitHub link
+
+5/27/2026
+- finished mobile integration for homepage!
+- added navigation bar and toggleable hamburger menu
+
+-- long break for finals --
+
+5/07/2026
+- started on mobile integration for homepage
+
+5/05/2026
+- finished icon grid layout
+- added background dim
+
+5/03/2026
+- figured out the grid layouts :')
+- finished framework or mobile view
+- added drop shadows, animation to tofu's head and root stylesheet for header format
+- finished the final base layout 
+
+5/01/2026
+- added vertical navigation
+- did some more practice on grid layouts 
+- working on mobile framework for website before continuing implementation
+
+4/30/2026
+- finished the landing page
+- added custom cursors!
+	- validate both cursor types work
+- implemented glorp/angel toggle
+- need to organize stylesheet into region grids
+
+4/29/2026
+- started on the landing page
+
+4/28/2026
+- finished mini hana avatar
+- completed the full layout for homepage, ready to implement 
+
+4/27/2026
+- finished hana avatar
+
+4/23/2026
+- finished center frame (angel mode/glorp mode) for homepage
+- finished dialogue box (angel mode/glorp mode) for homepage
+- finished wireframe for angel mode homepage
+- finished wireframe for glorp mode homepage
+
+-- long break for school --
+
+3/28/2026
+- started on custom frames for homepage
+
+3/27/2026
+- finished landing page heart (very happy with it)
+- updated colors of gemheart icon to match more with theme
+
+3/25/2026
+- started programming repository and set up template for landing page
+- started wireframe in figma
+- finished landing page background
+
+3/14/2026
+- finished tofu angel icon
+- finished cownap icon
+- finished shrink ray icon
+- finished magic wand icon
+- updated star halo icon
+*all icons finished!
+
+3/13/2026
+- finished shooting star icon
+- updated moon and sun icons
+- finished glorp notepad icon
+- finished topu notepad icon
+
+3/12/2026
+- finished star halo icon
+
+3/03/2026
+- finished glorp ship icon
+- finished heart clouds icon
+- worked on several drafts for angel sky background (tbd)
+
+3/01/2026
+- finished heart wings icon
+- finished moon icon
+- finished sun icon
+
+2/27/2026
+- finished glorp angel icon
+
+2/21/2026
+- finalized icon ideas for both themes
+
+2/20/2026
+- finalized layout ideas
+- started thinking about possible theme for assets
+- created a flowchart for site map
+- finished glorp night sky grid for background
