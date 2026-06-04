@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // replaces assets based on light/dark modes
         if(document.documentElement.classList.contains("glorp-mode"))
-        {
-            swapSrc("fav", "../../assets/media/sitewide/favicon_glorp.png")
-            
+        {            
             swapSrc("nav-home", "../../assets/media/glorp/glorpuhead.PNG");
             swapSrc("nav-abtme", "../../assets/media/glorp/icons/angelglorp.png");
             swapSrc("nav-git", "../../assets/media/glorp/icons/glorp1.png");
@@ -77,8 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else
         {
-            swapSrc("fav", "../../assets/media/sitewide/favicon.png")
-
             swapSrc("nav-home", "../../assets/media/angel/topuhead.PNG");
             swapSrc("nav-abtme", "../../assets/media/angel/icons/heartwing.png");
             swapSrc("nav-git", "../../assets/media/angel/icons/gemheart1.png");

@@ -79,7 +79,7 @@ body > * {
 }
 
 /* =====================================================
- * glorp style  
+ * glorp/dark mode style  
  * =====================================================*/
 html.glorp-mode{
     cursor: url("../assets/cursors/glorptopia_pointer.cur"), default;
@@ -140,7 +140,7 @@ outline: 1px solid red;
     margin: 0 auto;
 }
 
-/* sidebar (left) */
+/* --- sidebar (left) --- */
 .leftside{
     grid-area: 1 / 1 / 1 / 1;
 
@@ -160,8 +160,7 @@ outline: 1px solid red;
     width: 150px;
 }
 
-
-/* center */
+/* --- center --- */
 .center{
     grid-area: 1 / 2 / 1 / 2;
     position: relative;
@@ -172,7 +171,7 @@ outline: 1px solid red;
     display: block;
 }
 
-/* icon grid */
+/* --- icon grid --- */
 .icon-container{
     display: grid;
     grid-template-columns: 120px 120px 120px 120px;
@@ -188,6 +187,7 @@ outline: 1px solid red;
     transform: translateX(-50%);
 }
 
+/* --- dialogue --- */
 .dialogue-box{
     position: relative;
     display: inline-block;
@@ -211,7 +211,7 @@ outline: 1px solid red;
     margin-left: 190px;
 }
 
-/* sidebar (right) */
+/* --- sidebar (right) --- */
 .rightside{
     grid-area: 1 / 3 / 1 / 3;
     margin-top: 35px;
@@ -220,7 +220,7 @@ outline: 1px solid red;
 }
 
 /* =====================================================
- * styling format
+ * general styling format
  * =====================================================*/
 h1{
     font-family: Dico;
@@ -243,9 +243,9 @@ p{
     color: var(--text-color);
 }
 /* =====================================================
- * leftside format
+ * leftside styling format
  * =====================================================*/
- /* nav bar */
+ /* --- nav bar --- */
     .nav h1{
         text-align: center;
     }
@@ -273,14 +273,14 @@ p{
         list-style-type: none;
     }
 
-/* guest bubble */
+/* --- guest bubble --- */
     #speechbubble{
         image-rendering: crisp-edges;
         width: 200px;
         filter: drop-shadow(1px 1px 3px black);
     }
 
-/* theme switch toggle */
+/* --- theme switch toggle --- */
     #topuhead{
         image-rendering: crisp-edges;
         width: 120px;
@@ -314,9 +314,9 @@ p{
     }
 
 /* =====================================================
- * center format
+ * center styling format
  * =====================================================*/
-/* icons assets */ 
+/* --- icons assets --- */ 
     .icon-size{
         image-rendering: pixelated;
         width: 90px;
@@ -356,7 +356,7 @@ p{
         transform: translateY(-5px);
     }
 
-/* dialogue assets */ 
+/* --- dialogue assets --- */ 
     .dialogue-box{
         z-index: 2;
     }
@@ -364,7 +364,7 @@ p{
         border: 5px solid var(--accent-color);
     }
 
-/* dialogue text */
+/* --- dialogue text --- */
     .dialogue-text{
         position: absolute;
         margin-left: 185px;
@@ -387,7 +387,7 @@ p{
     }
 
 /* =====================================================
- * rightside format
+ * rightside styling format
  * =====================================================*/
 #hana{
     width: 288px;
@@ -441,6 +441,7 @@ p{
     z-index: 300;
 }
 
+/* --- navigation bar --- */
 .nav-bar {
     background: var(--primary-color);
     padding: 10px 16px;
@@ -463,7 +464,7 @@ p{
     width: 40px;
 }
 
-/* ham lines */
+/* --- ham lines --- */
     .burger-button span {
         height: 5px;
         width: 90%;
@@ -482,7 +483,7 @@ p{
         top: 75%;
     }
 
-/* exit */
+/* --- close ham lines --- */
     .burger-button.active span:nth-child(1) {
         top: 50%;
         transform: translate(-50%, 50%) rotate(45deg);
@@ -497,7 +498,7 @@ p{
         transform: translate(-50%, 50%) rotate(-45deg);
     }
 
-/* menu */
+/* --- off-screen menu --- */
     .burger-menu {
         background-color: var(--accent-color);
         height: 45vh;
@@ -554,11 +555,7 @@ p{
 /* =====================================================
  * media queries
  * =====================================================*/
-/* MOBILE VERSION */
-/* =====================================================
- * media queries
- * =====================================================*/
-/* MOBILE VERSION */
+/* --- MOBILE VERSION --- */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
 
     .nav-wrapper {
@@ -573,7 +570,7 @@ p{
         display: block;
     }
 
-    /* --- Grid: single column, full viewport width --- */
+    /* --- grid: single column, full viewport width --- */
     .container {
         display: flex;
         flex-direction: column;
@@ -617,7 +614,7 @@ p{
         transform: translateY(100%);
     }
 
-    /* Guestbook bubble: keep it right-aligned */
+    /* guestbook bubble: keep it right-aligned */
     .guestbook-bubble {
         transform: translateX(190%);
         width: 110px;
@@ -642,7 +639,7 @@ p{
         display: block;
     }
 
-    /* Icon grid: flow inside the frame, no absolute positioning */
+    /* icon grid: flow inside the frame, no absolute positioning */
     .icon-container {
         position: static;
         grid-template-columns: repeat(4, 1fr);
