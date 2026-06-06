@@ -123,12 +123,12 @@ html.glorp-mode :is(
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
+
+ */
+
  * {
 outline: 1px solid red;
 } 
- */
-
-
 
 .container{
     display: grid;
@@ -371,7 +371,7 @@ p{
 /* --- dialogue text --- */
     .dialogue-text{
         position: absolute;
-        margin-left: 185px;
+        margin-left: 190px;
         margin-top: -10px;
         z-index: 3;
         width: 600px;
@@ -388,6 +388,12 @@ p{
     #warning{
         float: right;
         margin-right: 10px;
+    }
+
+/* dialogue repositions when modal is open */
+    body.modal-open .dialogue{
+        position: absolute;
+        transform: translateY(10%);
     }
 
 /* =====================================================
@@ -630,12 +636,31 @@ p{
     border: 5px solid var(--accent-color);
 
     margin: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .abt-brief p {
     padding: 10px;
     text-align: center;
+}
+
+#door {
+    margin-left: 300px;
+    margin-top: 20px;
+    image-rendering: pixelated;
+    width: 200px;
+}
+
+.hanasdoor a {
+    font-family: PixelOperator;
+    font-weight: bold;
+    font-size: 25px;
+    color:var(--subheader-color);
+    margin-left: 320px;
+}
+
+.hanasdoor {
+    padding-bottom: 50px;
 }
 
 /* =====================================================

@@ -123,11 +123,38 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-butt]');
 const overlay = document.getElementById('overlay');
 
+const dialogueText = document.getElementById('welcome');
+const scrambleText = document.getElementById('scramble');
+const warningText = document.getElementById('warning');
+const welcomeText = dialogueText.textContent;
+
+
+// dialogue text for each modal
+const dialogue = {
+    '#abt-modal' : 'Come visit my room!',
+    /*
+    '#edu-modal' : 'Go Titans!',
+    '#exp-modal' : 'Always coding . . .',
+    '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
+    '#build-modal' : 'Please don\'t take my assets :(',
+    '#gb-modal' : 'Thank you for visiting~',*/
+};
+
+
 function openModal(modal) {
     if(modal == null) 
         return;
     modal.classList.add('active');
     overlay.classList.add('active');
+    document.body.classList.add('modal-open');
+    scrambleText.style.visibility = 'hidden';
+    warningText.style.visibility = 'hidden';
+
+    // matches modal key with corresponding dialogue text
+    const key = Object.keys(dialogue).find(k => modal.matches(k));
+    if (key)
+        dialogueText.textContent = dialogue[key];
+
 }
 
 function closeModal(modal) {
@@ -135,6 +162,11 @@ function closeModal(modal) {
         return;
     modal.classList.remove('active');
     overlay.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    scrambleText.style.visibility = 'visible';
+    warningText.style.visibility = 'visible';
+
+    dialogueText.textContent = welcomeText;
 }
 
 openModalButtons.forEach(button => {
