@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="overlay"></div> <!-- for active modals -->
     <!-- BURGER NAVIGATION-->
     <!-- WRAPPER: nav + slide menu live here together -->
     <div class="nav-wrapper">
@@ -117,9 +118,36 @@
             
             <div class="icon-container">
                 <div class="about-me">
-                    <img src="../../assets/media/angel/icons/heartwing.png" id="about-me-img" class="icon-size">
+                    <img src="../../assets/media/angel/icons/heartwing.png" 
+                        id="about-me-img" 
+                        class="icon-size"
+                        data-modal-target="#abt-modal">
                     <h2>About Me</h2>
+
+                    <!-- About Me Modal-->
+                    <div class="modal" id="abt-modal">
+                        <div class="modal-header">
+                            <div class="modal-title">About Me</div>
+                            <button data-close-butt class="close-butt">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="abt-brief">
+                                <p>I got introduced to programming in High School through an AP CSA class 
+                                where I was taught Java. Once I went to community college I started 
+                                learning C++ and started working with Python at Cal State Fullerton 
+                                for my upper division classes. I taught myself HTML, CSS, and JavaScript
+                                and my primary language is currently C++.</p>
+                            </div>
+                            <div class="hanasdoor">
+                                <a href="hanasroom.html" target="_blank">Go to Hana's Room</a>
+                                <img src="../../assets/media/hanaroom/door.gif" id="door">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
+
                 <div class="github">
                     <img src="../../assets/media/angel/icons/gemheart1.png" id="github-img" class="icon-size">
                     <h2>Github</h2>
@@ -149,17 +177,18 @@
                     <h2>Guestbook</h2>
                 </div>
             </div>
-            
-            <div class="dialogue-text">
-                <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
-                <p id="scramble">glorp of Glorptopia.</p>
-                <p id="warning">(best viewed on desktop)</p>
+            <div class="dialogue">
+                <div class="dialogue-text">
+                    <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
+                    <p id="scramble">glorp of Glorptopia.</p>
+                    <p id="warning">(best viewed on desktop)</p>
+                </div>
+                <div class="dialogue-box">
+                    <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
+                    <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
+                </div>
             </div>
             
-            <div class="dialogue-box">
-                <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
-                <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
-            </div>
         </main>
         <!-- CENTER END -->
 
@@ -200,6 +229,7 @@
     </footer>
 
     <script src="../../js/homepage/homepage.js"></script>
+    
 </body>
 
 </html>

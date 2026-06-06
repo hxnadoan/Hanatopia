@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // replaces assets based on light/dark modes
         if(document.documentElement.classList.contains("glorp-mode"))
-        {
-            swapSrc("fav", "../../assets/media/sitewide/favicon_glorp.png")
-            
+        {            
             swapSrc("nav-home", "../../assets/media/glorp/glorpuhead.PNG");
             swapSrc("nav-abtme", "../../assets/media/glorp/icons/angelglorp.png");
             swapSrc("nav-git", "../../assets/media/glorp/icons/glorp1.png");
@@ -77,8 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else
         {
-            swapSrc("fav", "../../assets/media/sitewide/favicon.png")
-
             swapSrc("nav-home", "../../assets/media/angel/topuhead.PNG");
             swapSrc("nav-abtme", "../../assets/media/angel/icons/heartwing.png");
             swapSrc("nav-git", "../../assets/media/angel/icons/gemheart1.png");
@@ -121,6 +117,73 @@ document.addEventListener("DOMContentLoaded", function() {
 /* =====================================================
  * icon buttons
  * =====================================================*/
+
+// --- MODALS ---
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-butt]');
+const overlay = document.getElementById('overlay');
+
+const dialogueText = document.getElementById('welcome');
+const scrambleText = document.getElementById('scramble');
+const warningText = document.getElementById('warning');
+const welcomeText = dialogueText.textContent;
+
+
+// dialogue text for each modal
+const dialogue = {
+    '#abt-modal' : 'Come visit my room!',
+    /*
+    '#edu-modal' : 'Go Titans!',
+    '#exp-modal' : 'Always coding . . .',
+    '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
+    '#build-modal' : 'Please don\'t take my assets :(',
+    '#gb-modal' : 'Thank you for visiting~',*/
+};
+
+
+function openModal(modal) {
+    if(modal == null) 
+        return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('modal-open');
+    scrambleText.style.visibility = 'hidden';
+    warningText.style.visibility = 'hidden';
+
+    // matches modal key with corresponding dialogue text
+    const key = Object.keys(dialogue).find(k => modal.matches(k));
+    if (key)
+        dialogueText.textContent = dialogue[key];
+
+}
+
+function closeModal(modal) {
+    if(modal == null) 
+        return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    scrambleText.style.visibility = 'visible';
+    warningText.style.visibility = 'visible';
+
+    dialogueText.textContent = welcomeText;
+}
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    });
+});
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
+    })
+})
+
+// --- GITHUB ---
 const githubLink = document.getElementById("github-img");
 
 githubLink.addEventListener('click', () => {
