@@ -3,6 +3,7 @@
 - fixed the about me modal clipping through dialogue
 - added modal links to both navigation/burger menu
 - added custom dialogue for each modal
+- finished wireframe for education and experience modals (might change to windows)
 
 6/04/2026
 - finished hana's room door icon
