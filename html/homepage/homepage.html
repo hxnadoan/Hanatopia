@@ -29,28 +29,27 @@
         <div class="burger-menu" id="burgerMenu">
             <ul>
                 <li><a href="homepage.html">
-                        <img src="../../assets/media/angel/topuhead.PNG" id="burg-home"> 
-                        Home</a></li>
-                <!-- change links once pages done -->
-                <li><a href="homepage.html">
+                    <img src="../../assets/media/angel/topuhead.PNG" id="burg-home"> 
+                    Home</a></li>
+                <li><a href="#" data-modal-target="#abt-modal">
                     <img src="../../assets/media/angel/icons/heartwing.png" id="burg-abtme">
                     About Me</a></li>
                 <li><a href="https://github.com/hxnadoan" target="_blank">
                     <img src="../../assets/media/angel/icons/gemheart1.png" id="burg-git">
                     Github</a></li>
-                <li><a href="homepage.html">
+                <li><a href="#" data-modal-target="#edu-modal">
                     <img src="../../assets/media/angel/icons/starhalo.png" id="burg-edu">
                     Education</a></li>
-                <li><a href="homepage.html">
+                <li><a href="#" data-modal-target="#exp-modal">
                     <img src="../../assets/media/angel/icons/heartcloud.png" id="burg-exp">
                     Experience</a></li>
-                <li><a href="homepage.html">
+                <li><a href="#" data-modal-target="#skills-modal">
                     <img src="../../assets/media/angel/icons/sun.png" id="burg-skills">
                     Skills</a></li>
                 <li><a href="homepage.html">
                     <img src="../../assets/media/angel/icons/topunotepad.png" id="burg-chnglg">
                     Changelog</a></li>
-                <li><a href="homepage.html">
+                <li><a href="#" data-modal-target="#build-modal">
                     <img src="../../assets/media/angel/icons/magicwand.png" id="burg-build">
                     Site Build</a></li>
                 <li><a href="homepage.html">
@@ -71,27 +70,25 @@
                     <li><a href="homepage.html">
                         <img src="../../assets/media/angel/topuhead.PNG" id="nav-home"> 
                         Home</a></li>
-
-                    <!-- change links once pages done -->
-                    <li><a href="homepage.html">
+                    <li><a href="#" data-modal-target="#abt-modal">
                         <img src="../../assets/media/angel/icons/heartwing.png" id="nav-abtme">
                         About Me</a></li>
                     <li><a href="https://github.com/hxnadoan" target="_blank">
                         <img src="../../assets/media/angel/icons/gemheart1.png" id="nav-git">
                         Github</a></li>
-                    <li><a href="homepage.html">
+                    <li><a href="#" data-modal-target="#edu-modal">
                         <img src="../../assets/media/angel/icons/starhalo.png" id="nav-edu">
                         Education</a></li>
-                    <li><a href="homepage.html">
+                    <li><a href="#" data-modal-target="#exp-modal">
                         <img src="../../assets/media/angel/icons/heartcloud.png" id="nav-exp">
                         Experience</a></li>
-                    <li><a href="homepage.html">
+                    <li><a href="#" data-modal-target="#skills-modal">
                         <img src="../../assets/media/angel/icons/sun.png" id="nav-skills">
                         Skills</a></li>
                     <li><a href="homepage.html">
                         <img src="../../assets/media/angel/icons/topunotepad.png" id="nav-chnglg">
                         Changelog</a></li>
-                    <li><a href="homepage.html">
+                    <li><a href="#" data-modal-target="#build-modal">
                         <img src="../../assets/media/angel/icons/magicwand.png" id="nav-build">
                         Site Build</a></li>
                     <li><a href="homepage.html">
@@ -141,41 +138,111 @@
                             <div class="hanasdoor">
                                 <a href="hanasroom.html" target="_blank">Go to Hana's Room</a>
                                 <img src="../../assets/media/hanaroom/door.gif" id="door">
-                                
                             </div>
                             
                         </div>
                     </div>
+                    <!-- end of About Me Modal-->
+
                 </div>
 
                 <div class="github">
                     <img src="../../assets/media/angel/icons/gemheart1.png" id="github-img" class="icon-size">
                     <h2>Github</h2>
                 </div>
+
                 <div class="education">
-                    <img src="../../assets/media/angel/icons/starhalo.png" id="education-img" class="icon-size">
+                    <img src="../../assets/media/angel/icons/starhalo.png" 
+                        id="education-img" 
+                        class="icon-size"
+                        data-modal-target="#edu-modal">
                     <h2>Education</h2>
+
+                    <!-- Education Modal-->
+                    <div class="modal" id="edu-modal">
+                        <div class="modal-header">
+                            <div class="modal-title">Education</div>
+                            <button data-close-butt class="close-butt">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                    </div>
+                    <!-- end of Education Modal-->
+
                 </div>
                 <div class="experience">
-                    <img src="../../assets/media/angel/icons/heartcloud.png" id="experience-img" class="icon-size">
+                    <img src="../../assets/media/angel/icons/heartcloud.png" 
+                        id="experience-img" 
+                        class="icon-size"
+                        data-modal-target="#exp-modal">
                     <h2>Experience</h2>
+
+                    <!-- Experience Modal-->
+                    <div class="modal" id="exp-modal">
+                        <div class="modal-header">
+                            <div class="modal-title">Experience</div>
+                            <button data-close-butt class="close-butt">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                    </div>
+                    <!-- end of Experience Modal-->
+
                 </div>
                 <div class="skills">
-                    <img src="../../assets/media/angel/icons/sun.png" id="skills-img" class="icon-size">
+                    <img src="../../assets/media/angel/icons/sun.png" 
+                        id="skills-img" 
+                        class="icon-size"
+                        data-modal-target="#skills-modal">
                     <h2>Skills</h2>
+
+                    <!-- Skills Modal-->
+                    <div class="modal" id="skills-modal">
+                        <div class="modal-header">
+                            <div class="modal-title">Skills</div>
+                            <button data-close-butt class="close-butt">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                    </div>
+                    <!-- end of Skills Modal-->
+
                 </div>
+
                 <div class="changelog">
                     <img src="../../assets/media/angel/icons/topunotepad.png" id="changelog-img" class="icon-size">
                     <h2>Changelog</h2>
                 </div>
+
                 <div class="sitebuild">
-                    <img src="../../assets/media/angel/icons/magicwand.png" id="sitebuild-img" class="icon-size">
+                    <img src="../../assets/media/angel/icons/magicwand.png" 
+                        id="sitebuild-img" 
+                        class="icon-size"
+                        data-modal-target="#build-modal">
                     <h2>Site Build</h2>
+
+                    <!-- Site Build Modal-->
+                    <div class="modal" id="build-modal">
+                        <div class="modal-header">
+                            <div class="modal-title">Site Build</div>
+                            <button data-close-butt class="close-butt">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        </div>
+                    </div>
+                    <!-- end of Site Build Modal-->
+
                 </div>
+
                 <div class="guestbook icon-size">
                     <img src="../../assets/media/angel/icons/tofuangel.png" id="guestbook" class="icon-size">
                     <h2>Guestbook</h2>
                 </div>
+
             </div>
             <div class="dialogue">
                 <div class="dialogue-text">

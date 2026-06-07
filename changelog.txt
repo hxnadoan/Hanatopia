@@ -1,3 +1,9 @@
+6/06/2026
+- finished assembling modals for the icon links
+- fixed the about me modal clipping through dialogue
+- added modal links to both navigation/burger menu
+- added custom dialogue for each modal
+
 6/04/2026
 - finished hana's room door icon
 - framed windowed page in figma
