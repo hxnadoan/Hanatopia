@@ -47,7 +47,8 @@ html {
 }
 
 :root{
-    background-image: url("../assets/media/angel/angelsky1.webp");
+    --background-img: url("../assets/media/angel/angelsky1.webp");
+    background-image: var(--background-img);
     --text-color: black;
     --primary-color: #FFCDDB;
     --accent-color: #ff80A4;
@@ -111,7 +112,8 @@ html.glorp-mode :is(
 }
 
 .glorp-mode{
-    background-image: url("../assets/media/glorp/glorpsky.webp");
+    --background-img: url("../assets/media/glorp/glorpsky.webp");
+    background-image: var(--background-img);
     --text-color: white;
     --primary-color: #007899;
     --accent-color: #BFFF3C;
@@ -579,7 +581,7 @@ p{
 
     border: 5px solid var(--accent-color);
     z-index: 9999;
-    background-image: url("../assets/media/angel/angelsky1.webp");
+    background-image: var(--background-img);
     width: 800px;
 }
 
@@ -672,8 +674,8 @@ p{
 .edu-headers {
     font-family: ModernDOS;
     font-size: 35px;
-    color: white;
-    -webkit-text-stroke: 10px var(--accent-color);
+    color: var(--accent-color);
+    -webkit-text-stroke: 10px var(--primary-color);
     paint-order: stroke fill;
 
     display: flex;
