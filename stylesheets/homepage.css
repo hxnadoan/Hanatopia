@@ -390,10 +390,15 @@ p{
         margin-right: 10px;
     }
 
-/* dialogue repositions when modal is open */
-    body.modal-open .dialogue{
+/* dialogue repositions when different modals are open */
+    body.abt-modal-open .dialogue {
         position: absolute;
         transform: translateY(10%);
+    }
+
+    body.edu-modal-open .dialogue {
+        position: absolute;
+        transform: translateY(50%);
     }
 
 /* =====================================================
