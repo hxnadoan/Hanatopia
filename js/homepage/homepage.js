@@ -144,12 +144,26 @@ function openModal(modal) {
     if(modal == null) 
         return;
 
-    // finds any active modal and removes it before the new one opens
+    // finds any current active modal and removes it before the new one opens
     document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
 
     modal.classList.add('active');
     overlay.classList.add('active');
-    document.body.classList.add('modal-open');
+
+    if (modal.id == 'abt-modal') {
+        document.body.classList.add('abt-modal-open');
+    } else if (modal.id == 'edu-modal') {
+        document.body.classList.add('edu-modal-open');
+    } else if (modal.id == 'exp-modal') {
+        document.body.classList.add('exp-modal-open');
+    } else if (modal.id == 'skills-modal') {
+        document.body.classList.add('skills-modal-open');
+    } else if (modal.id == 'changelog-modal') {
+        document.body.classList.add('changelog-modal-open');
+    } else if (modal.id == 'build-modal') {
+        document.body.classList.add('build-modal-open');
+    }
+
     scrambleText.style.visibility = 'hidden';
     warningText.style.visibility = 'hidden';
 
@@ -166,7 +180,8 @@ function closeModal(modal) {
 
     modal.classList.remove('active');
     overlay.classList.remove('active');
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove('abt-modal-open', 'edu-modal-open', 'exp-modal-open', 
+                                    'skills-modal-open', 'changelog-modal-open', 'build-modal-open');
     scrambleText.style.visibility = 'visible';
     warningText.style.visibility = 'visible';
 

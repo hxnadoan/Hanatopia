@@ -390,10 +390,15 @@ p{
         margin-right: 10px;
     }
 
-/* dialogue repositions when modal is open */
-    body.modal-open .dialogue{
+/* dialogue repositions when different modals are open */
+    body.abt-modal-open .dialogue {
         position: absolute;
         transform: translateY(10%);
+    }
+
+    body.edu-modal-open .dialogue {
+        position: absolute;
+        transform: translateY(50%);
     }
 
 /* =====================================================
@@ -662,6 +667,52 @@ p{
 .hanasdoor {
     padding-bottom: 50px;
 }
+
+/* --- education --- */
+.edu-headers {
+    font-family: ModernDOS;
+    font-size: 35px;
+    color: white;
+    -webkit-text-stroke: 10px var(--accent-color);
+    paint-order: stroke fill;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-box {
+    background-color: var(--primary-color);
+    border: 5px solid var(--accent-color);
+    padding: 0px 20px 0px 20px;
+}
+
+.edu-achievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.school {
+    font-family: Dico;
+    color: var(--header-color);
+    font-size: 20px;
+    margin-bottom: 0;
+
+}
+
+.certif {
+    margin-top: 10px;
+}
+
+.school-date {
+    font-family: ModernDOS;
+    font-weight: lighter;
+    font-size: 20px;
+
+    text-align: right;
+}
+
 
 /* =====================================================
  * media queries
