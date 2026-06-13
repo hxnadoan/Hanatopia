@@ -1,3 +1,9 @@
+6/12/2026
+- added education modal
+- updated background image to be variable
+- added adjustments to dialogue depending on modal opened
+- added experience page
+
 6/06/2026
 - finished assembling modals for the icon links
 - fixed the about me modal clipping through dialogue

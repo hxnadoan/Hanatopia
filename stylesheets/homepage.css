@@ -134,7 +134,7 @@ outline: 1px solid red;
 
 .container{
     display: grid;
-    grid-template-columns: 300px 801px 300px;
+    grid-template-columns: 300px 1fr 300px;
     grid-template-rows: auto;
     align-items: start;
 
@@ -322,6 +322,10 @@ p{
 /* =====================================================
  * center styling format
  * =====================================================*/
+ /* --- center for pages with no data in right column --- */
+.no-rightside-center {
+    margin-left: 50px;
+}
 /* --- icons assets --- */ 
     .icon-size{
         image-rendering: pixelated;

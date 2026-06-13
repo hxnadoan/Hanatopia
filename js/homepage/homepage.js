@@ -133,7 +133,6 @@ const welcomeText = dialogueText.textContent;
 const dialogue = {
     '#abt-modal' : 'Come visit my room!',
     '#edu-modal' : 'Go Titans!',
-    '#exp-modal' : 'Always coding . . .',
     '#skills-modal' : 'Knowledge I\'ve collected as I program~',
     '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
     '#build-modal' : 'Please don\'t take my assets :(',
@@ -154,8 +153,6 @@ function openModal(modal) {
         document.body.classList.add('abt-modal-open');
     } else if (modal.id == 'edu-modal') {
         document.body.classList.add('edu-modal-open');
-    } else if (modal.id == 'exp-modal') {
-        document.body.classList.add('exp-modal-open');
     } else if (modal.id == 'skills-modal') {
         document.body.classList.add('skills-modal-open');
     } else if (modal.id == 'changelog-modal') {
@@ -207,6 +204,13 @@ const githubLink = document.getElementById("github-img");
 
 githubLink.addEventListener('click', () => {
     window.open('https://github.com/hxnadoan', '_blank');
+});
+
+// --- EXPERIENCE ---
+const experienceLink = document.getElementById("experience-img");
+
+experienceLink.addEventListener('click', () => {
+    window.open("experience.html", '_self');
 });
 
 /* =====================================================
