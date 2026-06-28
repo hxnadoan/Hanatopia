@@ -131,7 +131,7 @@ const welcomeText = dialogueText.textContent;
 
 // dialogue text for each modal
 const dialogue = {
-    '#abt-modal' : 'Come visit my room!',
+    '#abt-modal' : 'Hana\'s Room is under construction still!',
     '#edu-modal' : 'Go Titans!',
     '#skills-modal' : 'Knowledge I\'ve collected as I program~',
     '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
@@ -153,13 +153,9 @@ function openModal(modal) {
         document.body.classList.add('abt-modal-open');
     } else if (modal.id == 'edu-modal') {
         document.body.classList.add('edu-modal-open');
-    } else if (modal.id == 'skills-modal') {
-        document.body.classList.add('skills-modal-open');
     } else if (modal.id == 'changelog-modal') {
         document.body.classList.add('changelog-modal-open');
-    } else if (modal.id == 'build-modal') {
-        document.body.classList.add('build-modal-open');
-    }
+    } 
 
     scrambleText.style.visibility = 'hidden';
     warningText.style.visibility = 'hidden';
@@ -177,8 +173,7 @@ function closeModal(modal) {
 
     modal.classList.remove('active');
     overlay.classList.remove('active');
-    document.body.classList.remove('abt-modal-open', 'edu-modal-open', 'exp-modal-open', 
-                                    'skills-modal-open', 'changelog-modal-open', 'build-modal-open');
+    document.body.classList.remove('abt-modal-open', 'edu-modal-open', 'changelog-modal-open');
     scrambleText.style.visibility = 'visible';
     warningText.style.visibility = 'visible';
 
@@ -220,7 +215,12 @@ skillsLink.addEventListener('click', () => {
     window.open("skills.html", '_self');
 });
 
-// --- CHANGELOG ---
+// --- SITEBUILD ---
+const sitebuildLink = document.getElementById("sitebuild-img");
+
+sitebuildLink.addEventListener('click', () => {
+    window.open("sitebuild.html", '_self');
+});
 
 /* =====================================================
  * scrambled text
