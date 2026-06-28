@@ -248,6 +248,13 @@ p{
     font-size: 20px;
     color: var(--text-color);
 }
+
+pre{
+    font-family: PixelOperator;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-color);
+}
 /* =====================================================
  * leftside styling format
  * =====================================================*/
@@ -676,7 +683,7 @@ p{
 
 /* --- education --- */
 .edu-headers {
-    font-family: ModernDOS;
+    font-family: Dico;
     font-size: 35px;
     color: var(--accent-color);
     -webkit-text-stroke: 10px var(--primary-color);
@@ -719,7 +726,50 @@ p{
     text-align: right;
 }
 
+/* =====================================================
+ * other pages
+ * =====================================================*/
+/* --- skills page --- */
+.skills-header {
+    font-family: ModernDOS; 
+    color:var(--accent-color);
+    font-size: 35px;
+    text-align: center;
+    transform: translateY(-40%);
+}
 
+.skills-subheader {
+    font-family: Dico;
+    color:var(--text-color);
+    font-size: 25px;
+    text-align: center;
+}
+
+.skills-box {
+    background-color: var(--primary-color);
+    border: 5px solid var(--accent-color);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 1000px;
+    height: 50px;
+}
+
+.tools-box {
+    font-family: Dico;
+    font-size: 25px;
+    background-color: var(--accent-color);
+    border: 5px solid var(--header-color);
+    padding: 5px 50px 0px 50px;
+    filter: drop-shadow(1px 1px 3px black);
+}
+
+.tools-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
 /* =====================================================
  * media queries
  * =====================================================*/
