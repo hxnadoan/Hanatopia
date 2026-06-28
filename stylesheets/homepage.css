@@ -781,8 +781,14 @@ pre{
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
+
+/* --- sitebuild page --- */
+#build-p p{
+    padding: 5px 20px 5px 20px;
+    text-align: left;
+}
+
 /* =====================================================
  * media queries
  * =====================================================*/
