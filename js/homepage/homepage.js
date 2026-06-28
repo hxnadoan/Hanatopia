@@ -136,6 +136,7 @@ const dialogue = {
     '#skills-modal' : 'Knowledge I\'ve collected as I program~',
     '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
     '#build-modal' : 'Please don\'t take my assets :(',
+    '#guestbook-modal' : 'Feel free to drop a message!',
 };
 
 
@@ -155,7 +156,9 @@ function openModal(modal) {
         document.body.classList.add('edu-modal-open');
     } else if (modal.id == 'changelog-modal') {
         document.body.classList.add('changelog-modal-open');
-    } 
+    } else if (modal.id == 'guestbook-modal') {
+        document.body.classList.add('guestbook-modal-open');
+    }
 
     scrambleText.style.visibility = 'hidden';
     warningText.style.visibility = 'hidden';
@@ -173,7 +176,8 @@ function closeModal(modal) {
 
     modal.classList.remove('active');
     overlay.classList.remove('active');
-    document.body.classList.remove('abt-modal-open', 'edu-modal-open', 'changelog-modal-open');
+    document.body.classList.remove('abt-modal-open', 'edu-modal-open', 'changelog-modal-open',
+                                    'guestbook-modal-open');
     scrambleText.style.visibility = 'visible';
     warningText.style.visibility = 'visible';
 
