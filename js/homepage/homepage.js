@@ -131,7 +131,7 @@ const welcomeText = dialogueText.textContent;
 
 // dialogue text for each modal
 const dialogue = {
-    '#abt-modal' : 'Come visit my room!',
+    '#abt-modal' : 'Hana\'s Room is under construction still!',
     '#edu-modal' : 'Go Titans!',
     '#skills-modal' : 'Knowledge I\'ve collected as I program~',
     '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
