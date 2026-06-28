@@ -122,6 +122,15 @@ html.glorp-mode :is(
 }
 
 /* =====================================================
+ * changelog style
+ * =====================================================*/
+html.changelog {
+    background: black;
+    --text-color: white;
+    --subheader-color: white;
+}
+
+/* =====================================================
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
@@ -411,7 +420,7 @@ pre{
 
     body.edu-modal-open .dialogue {
         position: absolute;
-        transform: translateY(50%);
+        transform: translateY(20%);
     }
 
 /* =====================================================
@@ -682,6 +691,10 @@ pre{
 }
 
 /* --- education --- */
+#edu-modal {
+    max-height: 500px;
+    overflow-y: auto;
+}
 .edu-headers {
     font-family: Dico;
     font-size: 35px;
