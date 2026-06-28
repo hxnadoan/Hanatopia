@@ -1,3 +1,7 @@
+6/27/2026
+- finished wireframe for skills page
+- added skills page
+
 6/12/2026
 - added education modal
 - updated background image to be variable

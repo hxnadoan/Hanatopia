@@ -213,6 +213,15 @@ experienceLink.addEventListener('click', () => {
     window.open("experience.html", '_self');
 });
 
+// --- SKILLS ---
+const skillsLink = document.getElementById("skills-img");
+
+skillsLink.addEventListener('click', () => {
+    window.open("skills.html", '_self');
+});
+
+// --- CHANGELOG ---
+
 /* =====================================================
  * scrambled text
  * =====================================================*/
