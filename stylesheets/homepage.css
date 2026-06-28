@@ -423,6 +423,11 @@ pre{
         transform: translateY(20%);
     }
 
+    body.guestbook-modal-open .dialogue {
+        position: absolute;
+        transform: translateY(10%);
+    }
+
 /* =====================================================
  * rightside styling format
  * =====================================================*/
@@ -788,6 +793,7 @@ pre{
     padding: 5px 20px 5px 20px;
     text-align: left;
 }
+
 
 /* =====================================================
  * media queries
