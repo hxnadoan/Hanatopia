@@ -134,12 +134,12 @@ html.changelog {
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
-
- */
-
  * {
 outline: 1px solid red;
 } 
+ */
+
+
 
 .container{
     display: grid;
@@ -815,6 +815,39 @@ pre{
     }
 
 /* -----------------------------------------------------
+ * SKILLS PAGE
+ * -----------------------------------------------------*/
+    .skills-header {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .skills-subheader {
+        font-size: 20px;
+        margin-top: none;
+        margin-bottom: 20px;
+    }
+
+    .skills-box {
+        width: 80%;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
+    .tools-box {
+        font-size: 15px;
+        padding: 5px 20px 0px 20px;
+    }
+
+    .tools-container {
+        width: 80%;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+/* -----------------------------------------------------
  * EXPERIENCE PAGE
  * -----------------------------------------------------*/
     .no-rightside-center {
@@ -842,7 +875,6 @@ pre{
     .certif {
     font-size: 14px;
     }
-
 
 /* -----------------------------------------------------
  * HOME PAGE
