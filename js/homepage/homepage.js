@@ -271,6 +271,7 @@ function stopScramble(){
 text.addEventListener("mouseenter", stopScramble);
 text.addEventListener("mouseleave", startScramble);
 
+startScramble();
 
 /* =====================================================
  * mmm burger
