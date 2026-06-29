@@ -133,7 +133,6 @@ const welcomeText = dialogueText.textContent;
 const dialogue = {
     '#abt-modal' : 'Hana\'s Room is under construction still!',
     '#edu-modal' : 'Go Titans!',
-    '#skills-modal' : 'Knowledge I\'ve collected as I program~',
     '#changelog-modal' : 'Hanatopia\'s history (Hanatopia wasn\'t built in a day)!',
     '#build-modal' : 'Please don\'t take my assets :(',
     '#guestbook-modal' : 'Feel free to drop a message!',
@@ -224,6 +223,13 @@ const sitebuildLink = document.getElementById("sitebuild-img");
 
 sitebuildLink.addEventListener('click', () => {
     window.open("sitebuild.html", '_self');
+});
+
+// -- GUESTBOOK ---
+const guestbookLink = document.getElementById("guestbook");
+
+guestbookLink.addEventListener('click', () => {
+    window.open('https://hanatopia.atabook.org/', '_self');
 });
 
 /* =====================================================
