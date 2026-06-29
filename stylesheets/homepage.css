@@ -134,12 +134,12 @@ html.changelog {
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
+
+ */
+
  * {
 outline: 1px solid red;
 } 
- */
-
-
 
 .container{
     display: grid;
@@ -801,6 +801,7 @@ pre{
 /* --- MOBILE VERSION --- */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
 
+    /* --- NAVIGATION --- */
     .nav-wrapper {
         display: block;
     }
@@ -813,6 +814,34 @@ pre{
         display: block;
     }
 
+/* -----------------------------------------------------
+ * EXPERIENCE PAGE
+ * -----------------------------------------------------*/
+    .edu-headers {
+        font-size: 35px;
+    }
+
+    .edu-box {
+        width: 80%;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .school {
+        font-size: 15px;
+    }
+
+    .school-date {
+        font-size: 20px;
+    }
+
+    .certif {
+    font-size: 15px;
+    }
+
+/* -----------------------------------------------------
+ * HOME PAGE
+ * -----------------------------------------------------*/
+/* ---- MODALS  ---- */
     .modal {
         width: 80%;
     }
