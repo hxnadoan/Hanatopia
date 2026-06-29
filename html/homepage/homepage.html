@@ -111,8 +111,24 @@ HOMEPAGE
         
         <!-- CENTER -->
         <main class="center">
-            <img src="../../assets/media/angel/centerframe.png" id="frame">
+
+            <!-- wrapper for frame and dialogue -->
+            <div class="frame-wrapper">
+                <img src="../../assets/media/angel/centerframe.png" id="frame">
+                <div class="dialogue">
+                    <div class="dialogue-text">
+                        <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
+                        <p id="scramble">glorp of Glorptopia.</p>
+                        <p id="warning">(best viewed on desktop)</p>
+                    </div>
+                    <div class="dialogue-box">
+                        <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
+                        <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
+                    </div>
+                </div>
+            </div>
             
+            <!-- icons in the center of frame -->
             <div class="icon-container">
                 <div class="about-me">
                     <img src="../../assets/media/angel/icons/heartwing.png" 
@@ -230,7 +246,7 @@ HOMEPAGE
                             <div class="modal-title">Changelog</div>
                             <button data-close-butt class="close-butt">&times;</button>
                         </div>
-                        <embed src="../changelog.html" width="100%" height="400px">
+                        <embed src="../changelog.html" width="100%" height="400px" id="embed-log">
                     </div>
                     <!-- end of Changelog Modal-->
                 </div>
@@ -259,20 +275,7 @@ HOMEPAGE
                     </div>
                     end of Guestbook Modal-->
                 </div>
-
             </div>
-            <div class="dialogue">
-                <div class="dialogue-text">
-                    <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
-                    <p id="scramble">glorp of Glorptopia.</p>
-                    <p id="warning">(best viewed on desktop)</p>
-                </div>
-                <div class="dialogue-box">
-                    <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
-                    <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
-                </div>
-            </div>
-            
         </main>
         <!-- CENTER END -->
 
