@@ -73,13 +73,13 @@ body::before {
 
 }
 
-/* had to comment out was conflicting with modal
-prevents overlay bleeds to any elements with no position set 
+/* might need to comment out bc conflicting with modal BUT
+need to prevent overlay bleeds to any elements with no position set 
+*/
 body > * {
     position: relative;
     z-index: 1;
-}*/
-
+}
 /* =====================================================
  * glorp/dark mode style  
  * =====================================================*/
@@ -817,8 +817,13 @@ pre{
 /* -----------------------------------------------------
  * EXPERIENCE PAGE
  * -----------------------------------------------------*/
+    .no-rightside-center {
+        margin-left: 40px;
+    }
+
     .edu-headers {
         font-size: 35px;
+        margin-right: 50px;
     }
 
     .edu-box {
@@ -835,8 +840,9 @@ pre{
     }
 
     .certif {
-    font-size: 15px;
+    font-size: 14px;
     }
+
 
 /* -----------------------------------------------------
  * HOME PAGE
