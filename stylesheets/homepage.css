@@ -134,12 +134,12 @@ html.changelog {
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
+
+ */
+
  * {
 outline: 1px solid red;
 } 
- */
-
-
 
 .container{
     display: grid;
@@ -794,7 +794,6 @@ pre{
     text-align: left;
 }
 
-
 /* =====================================================
  * media queries
  * =====================================================*/
@@ -813,6 +812,14 @@ pre{
     .burger-button {
         display: block;
     }
+
+/* -----------------------------------------------------
+ * SITEBUILD PAGE
+ * -----------------------------------------------------*/
+#build-p p{
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
 
 /* -----------------------------------------------------
  * SKILLS PAGE
