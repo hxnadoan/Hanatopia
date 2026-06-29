@@ -126,7 +126,7 @@ const overlay = document.getElementById('overlay');
 const dialogueText = document.getElementById('welcome');
 const scrambleText = document.getElementById('scramble');
 const warningText = document.getElementById('warning');
-const welcomeText = dialogueText.textContent;
+const welcomeText = dialogueText ? dialogueText.textContent : '';
 
 
 // dialogue text for each modal
@@ -200,78 +200,93 @@ closeModalButtons.forEach(button => {
 // --- GITHUB ---
 const githubLink = document.getElementById("github-img");
 
-githubLink.addEventListener('click', () => {
-    window.open('https://github.com/hxnadoan', '_blank');
-});
+if (githubLink) {
+    githubLink.addEventListener('click', () => {
+        window.open('https://github.com/hxnadoan', '_blank');
+    });
+}
 
 // --- EXPERIENCE ---
 const experienceLink = document.getElementById("experience-img");
 
-experienceLink.addEventListener('click', () => {
-    window.open("experience.html", '_self');
-});
+if (experienceLink) {
+    experienceLink.addEventListener('click', () => {
+        window.open("experience.html", '_self');
+    });
+}
 
 // --- SKILLS ---
 const skillsLink = document.getElementById("skills-img");
 
-skillsLink.addEventListener('click', () => {
-    window.open("skills.html", '_self');
-});
+if (skillsLink) {
+    skillsLink.addEventListener('click', () => {
+        window.open("skills.html", '_self');
+    });
+}
 
 // --- SITEBUILD ---
 const sitebuildLink = document.getElementById("sitebuild-img");
 
-sitebuildLink.addEventListener('click', () => {
-    window.open("sitebuild.html", '_self');
-});
+if (sitebuildLink) {
+    sitebuildLink.addEventListener('click', () => {
+        window.open("sitebuild.html", '_self');
+    });
+}
 
 // -- GUESTBOOK ---
 const guestbookLink = document.getElementById("guestbook");
 
-guestbookLink.addEventListener('click', () => {
-    window.open('https://hanatopia.atabook.org/', '_self');
-});
+if (guestbookLink) {
+    guestbookLink.addEventListener('click', () => {
+        window.open('https://hanatopia.atabook.org/', '_self');
+    });
+}
 
 /* =====================================================
  * scrambled text
  * =====================================================*/
 var text = document.getElementById("scramble");
-let randomChars = "!@#$%&*()_+-<>";
-let iterations = 0;
-let originalText = text.textContent;
-let interval = null;
 
-function startScramble() {
-    iterations = 0;
+if (text) {
+    let randomChars = "!@#$%&*()_+-<>";
+    let iterations = 0;
+    let originalText = text.textContent;
+    let interval = null;
 
-    // scrambling interval that retuns random characters
-    // in place of original character index in string
-    interval = setInterval(() => {
-        text.textContent = originalText.split("").map((char, index) => {
-            return randomChars.charAt(Math.floor(Math.random() 
-            * randomChars.length));
-        }).join("");
+    function startScramble() {
+        iterations = 0;
 
-        if (iterations >= originalText.length) {
-            iterations = 0;
-        } else {
-            iterations += 1/16; // speed
-        }
-    }, 90); // delay
+        // scrambling interval that retuns random characters
+        // in place of original character index in string
+        interval = setInterval(() => {
+            text.textContent = originalText.split("").map((char, index) => {
+                return randomChars.charAt(Math.floor(Math.random() 
+                * randomChars.length));
+            }).join("");
+
+            if (iterations >= originalText.length) {
+                iterations = 0;
+            } else {
+                iterations += 1/16; // speed
+            }
+        }, 90); // delay
+    }
+
+    // reveals original string
+    function stopScramble(){
+        clearInterval(interval);
+        interval = null;
+        text.textContent = originalText;
+    }
+
+    // on hover reveals the message
+    text.addEventListener("mouseenter", stopScramble);
+    text.addEventListener("mouseleave", startScramble);
+
+    startScramble();
 }
 
-// reveals original string
-function stopScramble(){
-    clearInterval(interval);
-    interval = null;
-    text.textContent = originalText;
-}
 
-// on hover reveals the message
-text.addEventListener("mouseenter", stopScramble);
-text.addEventListener("mouseleave", startScramble);
-
-startScramble();
 
 /* =====================================================
  * mmm burger
