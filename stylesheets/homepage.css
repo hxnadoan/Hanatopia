@@ -663,88 +663,96 @@ pre{
  * modal windows
  * =====================================================*/
 /* --- about me --- */
-.abt-brief {
-    background-color: var(--primary-color);
-    border: 5px solid var(--accent-color);
+    .abt-brief {
+        background-color: var(--primary-color);
+        border: 5px solid var(--accent-color);
 
-    margin: 20px;
-    margin-bottom: 30px;
-}
+        margin: 20px;
+        margin-bottom: 30px;
+    }
 
-.abt-brief p {
-    padding: 10px;
-    text-align: center;
-}
+    .abt-brief p {
+        padding: 10px;
+        text-align: center;
+    }
 
-#door {
-    margin-top: 20px;
-    image-rendering: pixelated;
-    width: 200px;
-}
+    #door {
+        margin-top: 20px;
+        image-rendering: pixelated;
+        width: 200px;
+    }
 
-.hanasdoor a {
-    font-family: PixelOperator;
-    font-weight: bold;
-    font-size: 25px;
-    color:var(--subheader-color);
-}
+    .hanasdoor a {
+        font-family: PixelOperator;
+        font-weight: bold;
+        font-size: 25px;
+        color:var(--subheader-color);
+    }
 
-.hanasdoor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
-}
+    .hanasdoor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
 
 /* --- education --- */
-#edu-modal {
-    max-height: 500px;
-    overflow-y: auto;
-}
-.edu-headers {
-    font-family: Dico;
-    font-size: 35px;
-    color: var(--accent-color);
-    -webkit-text-stroke: 10px var(--primary-color);
-    paint-order: stroke fill;
+    #edu-modal {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    .edu-headers {
+        font-family: Dico;
+        font-size: 35px;
+        color: var(--accent-color);
+        -webkit-text-stroke: 10px var(--primary-color);
+        paint-order: stroke fill;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.edu-box {
-    background-color: var(--primary-color);
-    border: 5px solid var(--accent-color);
-    padding: 0px 20px 0px 20px;
-}
+    .edu-box {
+        background-color: var(--primary-color);
+        border: 5px solid var(--accent-color);
+        padding: 0px 20px 0px 20px;
+    }
 
-.edu-achievements {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+    .edu-achievements {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
-.school {
-    font-family: Dico;
-    color: var(--header-color);
-    font-size: 20px;
-    margin-bottom: 0;
+    .school {
+        font-family: Dico;
+        color: var(--header-color);
+        font-size: 20px;
+        margin-bottom: 0;
 
-}
+    }
 
-.certif {
-    margin-top: 10px;
-}
+    .certif {
+        margin-top: 10px;
+    }
 
-.school-date {
-    font-family: ModernDOS;
-    font-weight: lighter;
-    font-size: 20px;
+    .school-date {
+        font-family: ModernDOS;
+        font-weight: lighter;
+        font-size: 20px;
 
-    text-align: right;
-}
+        text-align: right;
+    }
 
+/* --- changelog --- */
+    #changelog-modal .modal-body {
+        padding: 0;
+    }
+
+    #embed-log {
+        height: 400px;
+    }
 /* =====================================================
  * other pages
  * =====================================================*/
@@ -865,6 +873,7 @@ pre{
     .edu-headers {
         font-size: 35px;
         margin-right: 50px;
+        text-align: center;
     }
 
     .edu-box {
@@ -963,11 +972,20 @@ pre{
     .hanasdoor {
         padding-bottom: 10px;
     }
+
+    /* -----------------------------------------------------
+    * Education
+    * -----------------------------------------------------*/
+    #edu-modal .modal-body {
+        margin-left: 30px;
+    }
     /* -----------------------------------------------------
     * Changelog
     * -----------------------------------------------------*/
-    #embed-log {
-        height: 350px;
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 14px;
     }
 
     /* --- grid: single column, full viewport width --- */
