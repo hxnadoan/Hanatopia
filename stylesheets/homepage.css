@@ -1602,3 +1602,32 @@ pre{
     }
 
 }
+
+/* --- DESKTOP VERSION (landscape) --- */
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container {
+        transform: scale(1.2);
+        transform-origin: top center;
+        margin: 200px auto;
+    }
+
+    #sitebuild-page .container {
+        grid-template-columns: 280px minmax(0, 1000px) 280px;
+        transform: scale(1.2);
+        transform-origin: top center;
+        margin: 200px auto 4000px;
+        width: auto;
+    }
+
+    .edu-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
