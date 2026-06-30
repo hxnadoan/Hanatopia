@@ -73,13 +73,13 @@ body::before {
 
 }
 
-/* had to comment out was conflicting with modal
-prevents overlay bleeds to any elements with no position set 
+/* might need to comment out bc conflicting with modal BUT
+need to prevent overlay bleeds to any elements with no position set 
+*/
 body > * {
     position: relative;
     z-index: 1;
-}*/
-
+}
 /* =====================================================
  * glorp/dark mode style  
  * =====================================================*/
@@ -663,87 +663,96 @@ pre{
  * modal windows
  * =====================================================*/
 /* --- about me --- */
-.abt-brief {
-    background-color: var(--primary-color);
-    border: 5px solid var(--accent-color);
+    .abt-brief {
+        background-color: var(--primary-color);
+        border: 5px solid var(--accent-color);
 
-    margin: 20px;
-    margin-bottom: 30px;
-}
+        margin: 20px;
+        margin-bottom: 30px;
+    }
 
-.abt-brief p {
-    padding: 10px;
-    text-align: center;
-}
+    .abt-brief p {
+        padding: 10px;
+        text-align: center;
+    }
 
-#door {
-    margin-left: 300px;
-    margin-top: 20px;
-    image-rendering: pixelated;
-    width: 200px;
-}
+    #door {
+        margin-top: 20px;
+        image-rendering: pixelated;
+        width: 200px;
+    }
 
-.hanasdoor a {
-    font-family: PixelOperator;
-    font-weight: bold;
-    font-size: 25px;
-    color:var(--subheader-color);
-    margin-left: 320px;
-}
+    .hanasdoor a {
+        font-family: PixelOperator;
+        font-weight: bold;
+        font-size: 25px;
+        color:var(--subheader-color);
+    }
 
-.hanasdoor {
-    padding-bottom: 50px;
-}
+    .hanasdoor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
 
 /* --- education --- */
-#edu-modal {
-    max-height: 500px;
-    overflow-y: auto;
-}
-.edu-headers {
-    font-family: Dico;
-    font-size: 35px;
-    color: var(--accent-color);
-    -webkit-text-stroke: 10px var(--primary-color);
-    paint-order: stroke fill;
+    #edu-modal {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    .edu-headers {
+        font-family: Dico;
+        font-size: 35px;
+        color: var(--accent-color);
+        -webkit-text-stroke: 10px var(--primary-color);
+        paint-order: stroke fill;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.edu-box {
-    background-color: var(--primary-color);
-    border: 5px solid var(--accent-color);
-    padding: 0px 20px 0px 20px;
-}
+    .edu-box {
+        background-color: var(--primary-color);
+        border: 5px solid var(--accent-color);
+        padding: 0px 20px 0px 20px;
+    }
 
-.edu-achievements {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+    .edu-achievements {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
-.school {
-    font-family: Dico;
-    color: var(--header-color);
-    font-size: 20px;
-    margin-bottom: 0;
+    .school {
+        font-family: Dico;
+        color: var(--header-color);
+        font-size: 20px;
+        margin-bottom: 0;
 
-}
+    }
 
-.certif {
-    margin-top: 10px;
-}
+    .certif {
+        margin-top: 10px;
+    }
 
-.school-date {
-    font-family: ModernDOS;
-    font-weight: lighter;
-    font-size: 20px;
+    .school-date {
+        font-family: ModernDOS;
+        font-weight: lighter;
+        font-size: 20px;
 
-    text-align: right;
-}
+        text-align: right;
+    }
 
+/* --- changelog --- */
+    #changelog-modal .modal-body {
+        padding: 0;
+    }
+
+    #embed-log {
+        height: 400px;
+    }
 /* =====================================================
  * other pages
  * =====================================================*/
@@ -794,13 +803,13 @@ pre{
     text-align: left;
 }
 
-
 /* =====================================================
  * media queries
  * =====================================================*/
 /* --- MOBILE VERSION --- */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
 
+    /* --- NAVIGATION --- */
     .nav-wrapper {
         display: block;
     }
@@ -813,8 +822,170 @@ pre{
         display: block;
     }
 
-    .modal {
+/* -----------------------------------------------------
+ * SITEBUILD PAGE
+ * -----------------------------------------------------*/
+#build-p p{
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+/* -----------------------------------------------------
+ * SKILLS PAGE
+ * -----------------------------------------------------*/
+    .skills-header {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .skills-subheader {
+        font-size: 20px;
+        margin-top: none;
+        margin-bottom: 20px;
+    }
+
+    .skills-box {
         width: 80%;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
+    .tools-box {
+        font-size: 15px;
+        padding: 5px 20px 0px 20px;
+    }
+
+    .tools-container {
+        width: 80%;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+/* -----------------------------------------------------
+ * EXPERIENCE PAGE
+ * -----------------------------------------------------*/
+    .no-rightside-center {
+        margin-left: 40px;
+    }
+
+    .edu-headers {
+        font-size: 35px;
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    .edu-box {
+        width: 80%;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .school {
+        font-size: 15px;
+    }
+
+    .school-date {
+        font-size: 20px;
+    }
+
+    .certif {
+    font-size: 14px;
+    }
+
+/* -----------------------------------------------------
+ * HOME PAGE
+ * -----------------------------------------------------*/
+/* ---- MODALS  ---- */
+    .modal {
+        position: fixed;
+        top: -50%;
+        left: 3.75%;
+        transform: none;
+        scale: 0;
+        height: 0;
+        overflow-y: auto;
+        width: 90%;
+    }
+
+    .modal.active {
+        scale: 1;
+        height: auto;
+        max-height: 70vh;
+        overflow-y: auto;
+        transform: none;
+    }
+
+    /* hiding the dialogue (sorry mobile viewers) */
+    body.abt-modal-open .dialogue,
+    body.edu-modal-open .dialogue,
+    body.changelog-modal-open .dialogue,
+    body.guestbook-modal-open .dialogue {
+        display: none;
+    }
+
+    /* hides the bottom assets to make view cleaner 
+    (and because it was causing overlapping issues) */
+    body.abt-modal-open .rightside,
+    body.edu-modal-open .rightside,
+    body.changelog-modal-open .rightside,
+    body.guestbook-modal-open .rightside {
+        display: none;
+    }
+
+    /* resizes the container so that the whole modal fits */
+    body.abt-modal-open .center,
+    body.edu-modal-open .center,
+    body.changelog-modal-open .center,
+    body.guestbook-modal-open .center {
+        height: 800px;
+    }
+
+    /* -----------------------------------------------------
+    * About Me 
+    * -----------------------------------------------------*/
+    .abt-brief {
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+
+    .abt-brief p {
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #door {
+        margin-left: 0px;
+        margin-top: 10px;
+        image-rendering: pixelated;
+        width: 200px;
+    }
+
+    .hanasdoor a {
+        font-size: 15px;
+        color:var(--subheader-color);
+        text-align: center;
+        margin: 0;
+    }
+
+    .hanasdoor {
+        padding-bottom: 10px;
+    }
+
+    /* -----------------------------------------------------
+    * Education
+    * -----------------------------------------------------*/
+    #edu-modal .modal-body {
+        margin-left: 30px;
+    }
+    /* -----------------------------------------------------
+    * Changelog
+    * -----------------------------------------------------*/
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 14px;
     }
 
     /* --- grid: single column, full viewport width --- */
@@ -831,6 +1002,7 @@ pre{
     .leftside {
         width: 100%;
         margin-top: 20px;
+        margin-bottom: 50px;
         padding: 0 16px;
         box-sizing: border-box;
         display: flex;
@@ -873,41 +1045,57 @@ pre{
 
     /* ---- CENTER ---- */
     .center {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        padding-top: 50px;
+        margin-top: 0px;
         box-sizing: border-box;
-        margin: 0;
-        /* allow children to stack normally */
-        position: static;
+
+        position: relative;
+    }
+
+    .frame-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
     }
 
     #frame {
         width: 100%;
+        height: 100%;
+        /* should prevent image warping when fitting into wrapper size*/
+        object-fit: contain;
         display: block;
     }
 
     /* icon grid: flow inside the frame, no absolute positioning */
     .icon-container {
-        position: static;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto;
-        gap: 0px;
-        row-gap: 0px;
-        transform: none;
-        margin-top: -250px;
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        align-items: start;
+        align-self: start;
+        margin-top: -110px;
+        gap: 0;
     }
 
     .icon-size {
         width: 45px;
     }
 
+    .about-me, .github, .education, .experience,
+    .skills, .changelog, .sitebuild, .guestbook {
+        height: 100%;
+        justify-content: flex-start;
+    }
     #about-me-img {
-        width: 60px;
+        width: 45px;
         transform: none;
     }
 
     #github-img {
-        width: 40px;
+        width: 45px;
         transform: none;
     }
 
@@ -927,6 +1115,15 @@ pre{
     }
 
     /* ---- DIALOGUE BOX ---- */
+    .dialogue {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 10000;
+    }
+
     .dialogue-box {
         width: 80%;
         margin-left: 40px;
@@ -968,7 +1165,7 @@ pre{
     #warning {
         font-size: 10px;
         margin-right: auto;
-        transform: translateY(-400%);
+        transform: translateY(-500%);
     }
 
     /* ---- RIGHTSIDE ---- */

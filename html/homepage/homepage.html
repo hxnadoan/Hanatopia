@@ -91,7 +91,7 @@ HOMEPAGE
                     <li><a href="sitebuild.html">
                         <img src="../../assets/media/angel/icons/magicwand.png" id="nav-build">
                         Site Build</a></li>
-                    <li><a href="#" data-modal-target="#guestbook-modal">
+                    <li><a href="https://hanatopia.atabook.org/">
                         <img src="../../assets/media/angel/icons/tofuangel.png" id="nav-gb">
                         Guestbook</a></li>
                 </ul>
@@ -111,8 +111,24 @@ HOMEPAGE
         
         <!-- CENTER -->
         <main class="center">
-            <img src="../../assets/media/angel/centerframe.png" id="frame">
+
+            <!-- wrapper for frame and dialogue -->
+            <div class="frame-wrapper">
+                <img src="../../assets/media/angel/centerframe.png" id="frame">
+                <div class="dialogue">
+                    <div class="dialogue-text">
+                        <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
+                        <p id="scramble">glorp of Glorptopia.</p>
+                        <p id="warning">(best viewed on desktop)</p>
+                    </div>
+                    <div class="dialogue-box">
+                        <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
+                        <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
+                    </div>
+                </div>
+            </div>
             
+            <!-- icons in the center of frame -->
             <div class="icon-container">
                 <div class="about-me">
                     <img src="../../assets/media/angel/icons/heartwing.png" 
@@ -230,7 +246,10 @@ HOMEPAGE
                             <div class="modal-title">Changelog</div>
                             <button data-close-butt class="close-butt">&times;</button>
                         </div>
-                        <embed src="../changelog.html" width="100%" height="400px">
+                        <div class="modal-body">
+                            <embed src="../changelog.html" width="100%" id="embed-log">
+                        </div>
+                        
                     </div>
                     <!-- end of Changelog Modal-->
                 </div>
@@ -244,34 +263,23 @@ HOMEPAGE
                 <div class="guestbook icon-size">
                     <img src="../../assets/media/angel/icons/tofuangel.png" 
                     id="guestbook" 
-                    class="icon-size"
-                    data-modal-target="#guestbook-modal">
+                    class="icon-size">
+                    <!--data-modal-target="#guestbook-modal"-->
                     <h2>Guestbook</h2>
 
-                    <!-- Guestbook Modal-->
+
+                    <!-- breaks the other modals for some reason
+                    Guestbook Modal
                     <div class="modal" id="guestbook-modal">
                         <div class="modal-header">
                             <div class="modal-title">Guestbook</div>
                             <button data-close-butt class="close-butt">&times;</button>
                         </div>
-                        <iframe src="https://hanatopia.atabook.org/" width="100%" height="400px"></iframe>
+                        <embed src="https://hanatopia.atabook.org/" width="100%" height="400px">
                     </div>
-                    <!-- end of Guestbook Modal-->
-                </div>
-
-            </div>
-            <div class="dialogue">
-                <div class="dialogue-text">
-                    <p id="welcome">Welcome to Hanatopia~! Enjoy your stay, beware of </p>
-                    <p id="scramble">glorp of Glorptopia.</p>
-                    <p id="warning">(best viewed on desktop)</p>
-                </div>
-                <div class="dialogue-box">
-                    <img src="../../assets/media/angel/dialoguebox.png" id="dialoguebg">
-                    <img src="../../assets/media/angel/hanaminipink.png" id="minihana">
+                    end of Guestbook Modal-->
                 </div>
             </div>
-            
         </main>
         <!-- CENTER END -->
 
