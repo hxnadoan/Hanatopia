@@ -134,12 +134,12 @@ html.changelog {
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
-
- */
-
  * {
 outline: 1px solid red;
 } 
+ */
+
+
 
 .container{
     display: grid;
@@ -1013,8 +1013,18 @@ pre{
         position: relative;
     }
 
+    .frame-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
     #frame {
         width: 100%;
+        height: 100%;
+        /* should prevent image warping when fitting into wrapper size*/
+        object-fit: contain;
         display: block;
     }
 
@@ -1025,7 +1035,7 @@ pre{
         grid-auto-rows: auto;
         align-items: start;
         align-self: start;
-        margin-top: -20px;
+        margin-top: -110px;
         gap: 0;
     }
 
@@ -1064,14 +1074,9 @@ pre{
     }
 
     /* ---- DIALOGUE BOX ---- */
-    .frame-wrapper {
-        position: relative;
-        width: 100%;
-    }
-
     .dialogue {
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
@@ -1119,7 +1124,7 @@ pre{
     #warning {
         font-size: 10px;
         margin-right: auto;
-        transform: translateY(-400%);
+        transform: translateY(-500%);
     }
 
     /* ---- RIGHTSIDE ---- */
