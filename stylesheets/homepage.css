@@ -889,14 +889,13 @@ pre{
  * -----------------------------------------------------*/
 /* ---- MODALS  ---- */
     .modal {
-        position: relative;
-        top: auto;
-        left: auto;
+        position: fixed;
+        top: -50%;
+        left: 3.75%;
         transform: none;
         scale: 0;
         height: 0;
-        overflow: hidden;
-        margin: 10px auto;
+        overflow-y: auto;
         width: 90%;
         transition: 200ms ease-in-out;
     }
@@ -907,6 +906,13 @@ pre{
         max-height: 70vh;
         overflow-y: auto;
         transform: none;
+    }
+
+    body.abt-modal-open .dialogue,
+    body.edu-modal-open .dialogue,
+    body.changelog-modal-open .dialogue,
+    body.guestbook-modal-open .dialogue {
+        display: none;
     }
 
     /* -----------------------------------------------------
