@@ -897,7 +897,6 @@ pre{
         height: 0;
         overflow-y: auto;
         width: 90%;
-        transition: 200ms ease-in-out;
     }
 
     .modal.active {
@@ -908,11 +907,29 @@ pre{
         transform: none;
     }
 
+    /* hiding the dialogue (sorry mobile viewers) */
     body.abt-modal-open .dialogue,
     body.edu-modal-open .dialogue,
     body.changelog-modal-open .dialogue,
     body.guestbook-modal-open .dialogue {
         display: none;
+    }
+
+    /* hides the bottom assets to make view cleaner 
+    (and because it was causing overlapping issues) */
+    body.abt-modal-open .rightside,
+    body.edu-modal-open .rightside,
+    body.changelog-modal-open .rightside,
+    body.guestbook-modal-open .rightside {
+        display: none;
+    }
+
+    /* resizes the container so that the whole modal fits */
+    body.abt-modal-open .center,
+    body.edu-modal-open .center,
+    body.changelog-modal-open .center,
+    body.guestbook-modal-open .center {
+        height: 800px;
     }
 
     /* -----------------------------------------------------
