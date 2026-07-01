@@ -1,11 +1,18 @@
 <div align="center">
 <img src="assets/media/landing_heart.png" width="200px">
+
+# Hanatopia
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  
 </div>
 
-<h1 align="center">Hanatopia</h1>
 <h3 align="center">🌐 Live Site</h3>
 <h3 align="center">Personal Portfolio Website v1.0.0 </h3>
 <h4 align="center">Started Feb 2026 - Completed June 2026</h4>
+
 
 ## <img src="assets/media/glorp/icons/glorpnotepad.png" width="30px"> Table of Contents
 - [About Project](#-about)
@@ -24,7 +31,7 @@
 This is a personal portfolio project that showcased all of my skills, experience, and other relevant personal information.
 - Contains updated information from my resume including completed, in-progress, and planned projects.
 - Implements a fully customized UI layout inspired by early 2000's pixel games and dating simulators.
-- Intended to be viewed on desktop, but made compatible for most mobile devices.
+- Designed primarily for desktop, with mobile responsiveness support.
 - Implemented using HTML, CSS, and Javascript through [VS Code](https://code.visualstudio.com/).
 - Hosted through GitHub Pages.
 - Maintained locally by me through Git :)
@@ -36,6 +43,8 @@ This is a personal portfolio project that showcased all of my skills, experience
 - No licensing is being provided for this project.
 
 ## <img src="assets/media/angel/icons/heartcloud.png" width="30px"> Assets
+
+
 
 ### Fonts
 - [Dico](https://www.dafont.com/dico.font) by Yannic Kötter
