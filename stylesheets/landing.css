@@ -1,15 +1,15 @@
 @font-face {
     font-family: ModernDOS;
-    src: url(../assets/fonts/ModernDOS8x14.ttf);
+    src: url(assets/fonts/ModernDOS8x14.ttf);
 }
 
 html {
-    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
+    cursor: url("assets/cursors/hanatopia_pointer.cur"), default;
 }
 
 body {
     
-    background-image: url("../assets/media/landing_sky.png");
+    background-image: url("assets/media/landing_sky.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -4,21 +4,21 @@
  * =====================================================*/
 @font-face {
     font-family: ModernDOS;
-    src: url(../assets/fonts/ModernDOS8x14.ttf);
+    src: url(assets/fonts/ModernDOS8x14.ttf);
 }
 
 @font-face {
     font-family: Dico;
-    src: url(../assets/fonts/Dico.ttf);
+    src: url(assets/fonts/Dico.ttf);
 }
 
 @font-face {
     font-family: PixelOperator;
-    src: url(../assets/fonts/PixelOperator.ttf);
+    src: url(assets/fonts/PixelOperator.ttf);
 }
 
 html {
-    cursor: url("../assets/cursors/hanatopia_pointer.cur"), default;
+    cursor: url("assets/cursors/hanatopia_pointer.cur"), default;
     overflow-x: hidden;
 }
 
@@ -43,11 +43,11 @@ html {
     [onclick],
     .clickable
 ) {
-    cursor: url("../assets/cursors/hanatopia_link.cur"), pointer;
+    cursor: url("assets/cursors/hanatopia_link.cur"), pointer;
 }
 
 :root{
-    --background-img: url("../assets/media/angel/angelsky1.webp");
+    --background-img: url("assets/media/angel/angelsky1.webp");
     background-image: var(--background-img);
     --text-color: black;
     --primary-color: #FFCDDB;
@@ -84,7 +84,7 @@ body > * {
  * glorp/dark mode style  
  * =====================================================*/
 html.glorp-mode{
-    cursor: url("../assets/cursors/glorptopia_pointer.cur"), default;
+    cursor: url("assets/cursors/glorptopia_pointer.cur"), default;
 }
 
 html.glorp-mode :is(
@@ -108,11 +108,11 @@ html.glorp-mode :is(
     [onclick],
     .clickable
 ) {
-    cursor: url("../assets/cursors/glorptopia_link.cur"), pointer;
+    cursor: url("assets/cursors/glorptopia_link.cur"), pointer;
 }
 
 .glorp-mode{
-    --background-img: url("../assets/media/glorp/glorpsky.webp");
+    --background-img: url("assets/media/glorp/glorpsky.webp");
     background-image: var(--background-img);
     --text-color: white;
     --primary-color: #007899;
