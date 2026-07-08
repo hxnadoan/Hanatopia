@@ -398,6 +398,11 @@ pre{
         z-index: 3;
         width: 600px;
     }
+    
+    #mobile-warning {
+        display: none;
+    }
+
     #welcome{
         font-size: 25px;
         float: left;
@@ -1150,22 +1155,22 @@ pre{
         width: 70%;
     }
 
-    #welcome {
-        font-size: 13px;
+    #mobile-warning {
+        font-size: 12px;
         float: none;
         display: flex;
     }
 
+    #welcome {
+        display: none;
+    }
+
     #scramble {
-        font-size: 12px;
-        float: none;
-        margin-top: 30px;
+        display: none;
     }
 
     #warning {
-        font-size: 10px;
-        margin-right: auto;
-        transform: translateY(-500%);
+        display: none;
     }
 
     /* ---- RIGHTSIDE ---- */
@@ -1622,7 +1627,7 @@ pre{
         grid-template-columns: 280px minmax(0, 1000px) 280px;
         transform: scale(1.2);
         transform-origin: top center;
-        margin: 200px auto 4000px;
+        margin: 200px auto 400px;
         width: auto;
     }
 
