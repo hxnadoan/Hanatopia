@@ -1,5 +1,5 @@
 
 // click to enter
-document.body.addEventListener("click", () => {
+document.addEventListener("click", () => {
     window.location.href = "html/homepage/homepage.html";
 });
