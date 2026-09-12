@@ -134,12 +134,12 @@ html.changelog {
  * grid layout (element positioning) 
  * =====================================================*/
 /* to help with positioning 
-
- */
-
  * {
 outline: 1px solid red;
 } 
+
+ */
+
 
 .container{
     display: grid;
