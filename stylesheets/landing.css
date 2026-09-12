@@ -57,3 +57,10 @@ h2 {
         transform:translateY(-20px);
     }
 }
+
+/* --- laptop VERSION (landscape) --- */
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    #landing_heart {
+        width: 500px;
+    }
+}
