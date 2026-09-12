@@ -137,8 +137,8 @@ html.changelog {
  * {
 outline: 1px solid red;
 } 
- */
 
+ */
 
 
 .container{
@@ -1628,6 +1628,35 @@ pre{
         transform: scale(1.2);
         transform-origin: top center;
         margin: 200px auto 400px;
+        width: auto;
+    }
+
+    .edu-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* --- laptop VERSION (landscape) --- */
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container {
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin: 80px auto;
+    }
+
+    #sitebuild-page .container {
+        grid-template-columns: 280px minmax(0, 1000px) 280px;
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin: 80px auto 400px;
         width: auto;
     }
 
